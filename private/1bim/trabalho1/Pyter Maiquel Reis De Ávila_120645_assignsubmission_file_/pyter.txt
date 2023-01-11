@@ -1,0 +1,24 @@
+1) er:
+
+faltou as publicações do grupo
+faltou o dono do grupo
+
+
+2) modelo relacional:
+
+* a cardinalidade entre grupo e usuário deveria ser n:n
+
+* faltou as publicações pertencentes ao grupo
+
+
+3) sql
+
+* cuidado com nomes de tabelas com acentos
+
+
+* cuidado com nomes de colunas pouco intuitivos: usuario1, usuario1_segue
+
+
+* não "alimentou" a base de dados
+
+$) feed: Não fez a consulta solicitada

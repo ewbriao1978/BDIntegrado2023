@@ -1,0 +1,38 @@
+leonardo (1.0)
+
+1) er: 
+
+* faltou o atributo "número da faixa" (-0.2)
+* o autorelacionamento "recomendar" não precisa ter um atributo "recomendo" (-0.2)
+* Dica: os relacionamentos devem ter nomes 
+
+2) modelo relacional:
+
+* faixa não pode ser "serial" já que vários cd's possuem faixas 1, 2 ..... (-0.2)
+* a coluna "id_outro_cd" deve ser uma fk (-0.2)
+* coluna "recomendo" incorreta (-0.2)
+
+
+3) script.sql
+
+* a coluna "id_outro_cd" deve ser uma fk (-0.2)
+* ausência de uma pk composta em autor_musica (-0.2)
+* id_faixa não é uma boa pk para a tabela musica_cd (-0.2)
+
+4) insert's
+
+data e tempo mal formatados (-0.2)
+* LINE 4: ('anos de ouro', 11.99, '24-12-1996', 3, 'true', 2),                     
+* LINE 2: ('anjos', 03:44),
+
+problemas de fk's inexistentes (-0.2):             
+* psql:leonardo.sql:79: ERROR:  insert or update on table "autor_musica" violates foreign key 
+constraint "autor_musica_id_musica_fkey"
+DETAIL:  Key (id_musica)=(2) is not present in table "musica".
+* psql:leonardo.sql:85: ERROR:  insert or update on table "musica_cd" violates foreign key constraint "musica_cd_id_musica_fkey"
+DETAIL:  Key (id_musica)=(1) is not present in table "musica".
+
+5) em branco (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)

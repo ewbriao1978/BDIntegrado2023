@@ -1,0 +1,24 @@
+1) er:
+
+* amizade não poderia ter um atributo identificador (quem tem atributo identificador são entidades fortes - e não relacionamento)
+
+
+2) modelo relacional:
+
+* Coluna feed_id sem sentido
+* Grupo não poderia ter uma coluna "participante_grupo_id"
+pois o relacionamento entre usuário e grupo é n:n
+* quem faz as publicações do grupo é o membro (usuário_grupo)
+e não o usuário
+* é um usuário que tem amigos (que são também outros usuários)
+* não há necessidade da tabela solicitação
+* amizade deveria ter uma chave primária composta (e não um chave primária simples)
+* amizade deveria estar ligada diretamente a tabela usuário
+
+3) SQL:
+
+FK incorreta de participante na tabela grupo
+coluna feed_id incorreta na tabela publicação
+
+
+4) FEED: ok

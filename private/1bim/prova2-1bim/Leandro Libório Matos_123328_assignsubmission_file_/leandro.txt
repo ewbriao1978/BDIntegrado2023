@@ -1,0 +1,26 @@
+leandro (2.4)
+
+1) er:
+
+faltou um identificador chave na entidade musica (-0.2)
+
+telefone não precisava ser multivalorado (-0.2)
+
+2) relacional:
+
+faltou mostrar o check > 0 de preço(-0.2)
+
+3) script.sql
+
+numero_da_faixa poderia ser definido com integer
+
+
+4) insert's
+
+ok
+
+5) em branco(-0.2)
+6) em branco(-0.2)
+7) em branco(-0.2)
+8) em branco(-0.2)
+9) em branco (-0.2)

@@ -1,0 +1,563 @@
+Victor (nota: 2.5)
+
+1) Modelo Relacional (valor recebido: 1/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (Valor recebido: 0/1.0):
+
+- stored procedure não foi corretamente criado
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1/1.0)
+
+- ok
+
+5) View (Valor recebido: 0/0.5):
+
+- questão incorreta: não existe tabela cliente;
+
+=============================== 
+Rodrigo (nota: 0.5)
+
+1) Modelo Relacional (valor recebido: 0.2/1.0):
+
+erro de sintaxe (-0.2):
+- LINE 3:     cpf character(11) unique check value (TRUE, FALSE),     ...
+
+erro de sintaxe  (-0.2):
+- LINE 4:     setor text check (limpeza, atendimento, operacao)
+
+erro de sintaxe  (-0.2):
+- LINE 2:     sala_id integer refernces sala (id),
+
+somente 3 tabelas foram criadas  (-0.2):
+ externo | filme  | table | postgres
+ externo | sessao | table | postgres
+ public  | sala   | table | postgres
+
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.3/0.5)
+
+- a clasula check de validação da coluna cpf de telespectador não funcionou por que a tabela não foi corretamente criada (-0.2)
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- stored procedure não foi corretamente criada
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+não foi possível testar a trigger já que a tabela de funcionário não foi corretamente criada
+
+5) View (Valor recebido: /0.5):
+
+- view não foi corretamente criada;
+
+===============================  
+Pyter (nota: 1.5)
+
+1) Modelo Relacional (valor recebido: 1/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (valor recebido: 0/1.0):
+
+- questão em branco
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+erros de sintaxe fizeram com que a trigger criada não fizesse o que foi solicitado pela questão
+ERROR:  missing FROM-clause entry for table "public"
+LINE 1: ...CT                 id FROM public.sala WHERE id = public.sal..
+
+5) View (Valor recebido: 0/0.5):
+
+- questão em branco
+
+=============================== 
+Nicolas (nova nota: 2.6)
+
+1) Modelo Relacional (valor recebido: 1/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.3/0.5)
+
+- fez o stored procedure, mas não colocou a clásula check (estava comentada) (-0.2)
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- questão em branco
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1.0/1.0)
+
+- ok. obs: não precisava colocar horário de saída no novo turno;
+
+5) View (Valor recebido: 0.3/0.5):
+
+- Fez, mas não formatou a data no padrão dd/mm/yyyy (-0.2) 
+
+=============================== 
+Natalia (nota: 0.2)
+
+1) Modelo Relacional (valor recebido: 0.2/1.0):
+
+Devido a um erro de sintaxe na linha 26, somente a tabela telespectador foi corretamente criada (0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0/0.5)
+
+- nenhum stored procedure foi corretamente criado.
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- nenhum stored procedure foi corretamente criado.
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- nenhuma trigger foi criado.
+
+5) View (Valor recebido: 0/0.5):
+
+- questão em branco
+===============================  
+
+Marcos (nota: 3.3)
+
+1) Modelo Relacional (valor recebido: 0.8/1.0):
+
+- falta da instrução \c (-0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (1/1.0):
+
+- ok
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1/1.0)
+
+- ok
+
+5) View (Valor recebido: 0/0.5):
+
+- erro de sintaxe
+psql:marcos.sql:186: ERROR:  invalid reference to FROM-clause entry for table "telespectador"
+LINE 3:     from ingresso inner join telespectador on ingresso.teles...                                                  ^
+
+
+=============================== 
+Manuella (nota: 0.2)
+
+1) Modelo Relacional (valor recebido: 0.2/1.0):
+
+- diversos erros de sintaxe
+- somente a tabela data foi criada corretamente (0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0/0.5)
+
+- clásula check não reconhecida. Logo, a função/stored procedure não foi corretamente criada. Assim, questão incorreta pois não fez
+o que foi solicitado
+LINE 3:     cpf character(11) CHECK (validaCPF(cpf) IS TRUE),
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- questão em branco
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- questão incorreta (não faz o que foi solicitado)
+
+5) View (Valor recebido: 0/0.5):
+
+- questão incorreta (não faz o que foi solicitado)
+
+=============================== 
+Maicon (nota: 1.3)
+
+1) Modelo Relacional (valor recebido: 1.0/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.1/0.5)
+
+- valida cpf não foi adicionado à clásula check da coluna cpf da tabela de telespectador (-0.2)
+
+- função/stored procedure foi criado em um schema incorreto e com nome incorreto (-0.2)
+  Schema   |      Name      | Result data type |            Argument data types             | Type 
+ validacpf | telespectador  | boolean          | character                                  | func
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- questão incorreta (não faz o que foi solicitado)
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- questão incorreta (não faz o que foi solicitado)
+
+5) View (Valor recebido: 0.2/0.5):
+
+- não formatou a data (-0.2)
+- faltou os dados de telespectador (-0.1)
+
+===============================
+
+Lucas (nota: 2.8)
+
+1) Modelo Relacional (valor recebido: 1.0/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+
+erro de sintaxe fez com que a função/stored não pudesse ser testada:
+ERROR:  missing FROM-clause entry for table "turno" 
+- LINE 1: select tempo_trabalhado + interno.turno.data_hora_saida - in...
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1/1.0)
+
+- ok. obs: poderia ter não atribuído horário de saída
+
+5) View (Valor recebido: 0.3/0.5):
+
+- não formatou a data (-0.2)
+obs: faltou dados para teste
+
+===============================
+Lorrana (nota: 3)
+
+1) Modelo Relacional (valor recebido: 1.0/1.0):
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- o teste com o id do funcionário = 1 não retornou nenhum valor mesmo este usuário tendo trabalhado 2 turnos neste mês
+ 
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1.0/1.0)
+
+- ok
+
+5) View (Valor recebido: 0.5/0.5):
+
+- ok
+
+===============================
+
+Leandro Matos (nota: 1.3)
+
+1) Modelo Relacional (valor recebido: 0.8/1.0):
+
+check incorreto para o setor do funcionário (-0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+- clásula check adicionada
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- questão não realizada
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- questão não realizada
+
+5) View (Valor recebido: 0/0.5):
+
+- questão não realizada
+
+===============================
+João (nota: 0 )
+
+1) Modelo Relacional (valor recebido: 0/1.0):
+
+- questão não realizada
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0/0.5)
+
+- questão incorreta: sem clásula check, não exigia herança, no SGDB da questão não há tabela pessoa_fisica
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- questão não realizada
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- questão incorreta
+
+5) View (Valor recebido: 0/0.5):
+
+- questão não realizada
+
+===============================
+ 
+Geraldo (nota: 2.0)
+
+1) Modelo Relacional (valor recebido: 1.0/1.0):
+
+- ok
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- falta de declarações de tipo no bloco DECLARE 
+psql:geraldo.sql:233: ERROR:  missing data type declaration at or near ":="
+LINE 5:     valorHoraTrabalhadaLIMPEZA := 10 ;
+
+Por este motivo, a função/stored procedure não foi criada. Assim, não foi possível testá-la:
+- psql:geraldo.sql:235: ERROR:  function calculosalario() does not exist
+
+- esta função não deveria ser um trigger
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- não foi criada
+
+5) View (Valor recebido: 0.5/0.5):
+
+- ok
+
+===============================
+
+Gabryel (nota: 1.6)
+
+1) Modelo Relacional (valor recebido: 0.6/1.0):
+
+erros de sintaxe (-0.2):
+psql:gabryel.sql:219: ERROR:  type "data" does not exist
+LINE 6:     data_inicio_turno data;
+
+- tabela "sala" deveria estar no schema public (-0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- erro de sintaxe que impede o teste
+ERROR:  missing FROM-clause entry for table "turno"
+LINE 1: SELECT extract(month from schema_interno.turno.data_hora_ent.
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- o gatilho da trigger deveria sob a tabela "funcionario"  - e não - sob a tabela "turno". Assim, não é possível testar
+
+5) View (Valor recebido: 0.5/0.5):
+
+- ok
+
+===============================
+
+Flavio (nota: 0.4)
+
+1) Modelo Relacional (valor recebido: 0.2/1.0):
+
+erros de sintaxe  (-0.2):
+    não deveria ter ponto e vírgula
+    - LINE 4:    sessao_id INTEGER REFERENCES sessao(id);
+   
+    ERROR:  syntax error at or near "hora"
+    LINE 6:    hora TIMESTAMP 
+    
+    faltou a clásula DEFAULT:
+    - psql:flavio.sql:63: ERROR:  syntax error at or near "CURRENT_TIMESTAMP"
+    - LINE 4:    data_hora_entrada TIMESTAMP CURRENT_TIMESTAMP,
+
+tabelas exigidas pela questão não foram criadas (-0.2):
+- ingresso
+- sessão
+- turno
+
+- telespectador não deveria ter a coluna "price" (-0.2)
+- telespectador precisaria ter a coluna "cpf" (-0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.2/0.5)
+
+- não foi adicionada a clásula check(validacpf(cpf)) is true) a telespectador (a tabela nem foi criada) (-0.2)
+- não foi solicitado que validacpf fosse uma trigger (-0.1)
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- função/stored procedure não foi criado corretamente, diversos erros de sintaxe
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- não foi possível testar a trigger, já que a tabela turno não foi criada
+
+5) View (Valor recebido: 0/0.5):
+
+- não foi criada
+
+===============================
+
+Felipe (nota: 0.7)
+
+1) Modelo Relacional (valor recebido: 0.4/1.0):
+
+erros de sintaxe (-0.2):
+- LINE 1: INSERT INTO externo.ingresso (telespectador_id, sessao_id, v...
+
+tabela de empregados não existe no bd proposto pela questão (-0.2) 
+- psql:felipe.sql:200: ERROR:  relation "empregados" does not exist
+
+duas tabelas não foram criadas (-0.2): 
+- ingresso
+- telespectador
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.3/0.5)
+
+- check incorreto (-0.2): 
+LINE 3:     cpf character(11) CHECK(validaCPF(cpf) IS TRUE),
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- função não criada
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1)
+
+- função trigger não é dispara pois o comportamento de gatilho não foi corretamente criado.
+Deveria funcionar sob a tabela funcionario - e não - sob a tabela empregados (que nem existe no bd)
+
+5) View (Valor recebido: 0/0.5):
+
+- view não pode ser criada, pois apresenta erros de sintaxe. Logo, foi criada incorretamente
+
+===============================
+
+Doris (nota: 0.2)
+
+1) Modelo Relacional (valor recebido: 0.2/1.0):
+
+- erros de sintaxe nos insert's
+- somente a tabela sala criada corretamente (+0.2)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0/0.5)
+
+- função valida cpf não foi criada
+
+3) Stored Procedure - Cálculo do Salário (0/1.0):
+
+- função de cálculo do salário não foi criada
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1)
+
+- trigger não criada
+
+5) View (Valor recebido: 0/0.5):
+
+- não formata a data
+- não foi possível testar, já que somente a tabela sala foi corretamente criada
+
+=====================================================
+
+Canrobert (nota: 4)
+
+1) Modelo Relacional (valor recebido: 1.0/1.0):
+
+- ok
+
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (1.0/1.0):
+
+- ok
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 1/1)
+
+- ok
+
+5) View (Valor recebido: 0.5/0.5):
+
+- ok
+
+=====================================================
+
+Andrews (nota: 2.5)
+
+1) Modelo Relacional (valor recebido: 1/1):
+
+- Nenhum erro de sintaxe
+- Esquemas criados corretamente
+- check's corretos
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.5/0.5)
+
+- ok
+
+3) Stored Procedure - Cálculo do Salário (0.7/1.0):
+
+
+- não foi possível testar já que não há nenhum funcionário na base dados (-0.1)
+- não retorna nenhum valor (-0.2)
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1)
+
+- Não funcionou 
+
+5) View (Valor recebido: 0.3/0.5):
+
+- não fez nenhum insert para testar (-0.2)
+
+=====================================================
+
+Alexandra (nota: 0.4)
+
+1) Modelo Relacional (nota: 0.2):
+
+- Faltou o \c para conectar ao banco
+- O schema "interno" (solicitado) não foi corretamente criado;  (-0.2)
+- Algumas tabelas pertencentes ao Modelo Relacional da questão não foram criadas; (-0.2)
+- Erros de Sintaxe próxima da definição da clásula unique da coluna CPF; (-0.2)
+- Sintaxe Incorreta na Checagem/Verificação para os setores possíveis de cada funcionário; (-0.2)
+
+2) Stored Procedure - Validação de CPF (nota: 0.2):
+
+- Os insert's de funcionário usados como teste para o STORED PROCEDURE não consideram funcionários com CPF (-0.3);
+
+3) Stored Procedure - Cálculo do Salário (Valor recebido: 0.0):
+
+- Ausência de declaração de tipos para as variáveis utilizadas (-0.2);         
+- Nenhum valor de trabalho por hora é "setada" (-0.2);
+- O parâmetro turno é, de forma incorreta, definido como uma constante (Recebendo o valor 8 sempre) (-0.2)
+- Problemas na definição das cláusulas de disparo da Trigger calculaSalario (-0.2); 
+	Obs: O exercício não solicitava a criação de uma Trigger atrelada a este Stored Procedure
+- Na declaração do STORED PROCEDURE aparecem 3 parâmetros ($1, $2 e $3) mas, internamente, a função solicita um quarto $4 de forma incorreta (-0.2)
+- SELECT com clásula WHERE incorreta, ou seja, a consulta realiza não filtra as horas trabalhados de um funcionário específico (-0.2)
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (nota: 0.0):
+
+- Ausência de declaração de tipos para as variáveis utilizadas (-0.2);
+- hora_entrada não é uma variável que não teve seu tipo declarado e, mesmo que fosse, não poderia ser inicializada com 08:00 (-0.2)
+- Triggers não devem retornar variáveis TEXT (resultado foi uma variável text definida dentro da função) (-0.2)
+- INSERT funcionário incorreto por diversos motivos (-0.2): 
+	1) A tabela não se chama NEW.funcionario mas "interno.funcionario"; 
+	2) Os valores dos campos do INSERT deveriam ser oriundos do novo funcionario - e não - variáveis não declaradas funcionario_nome e setor_nome;
+- No INSERT de turno a sala_id é um integer - e não - um text (nome da sala) (-0.2)
+
+5) View (nota: 0.0):
+
+- Consulta SQL incorreta (com erros de sintaxe);
+
+=======================================================
+
+

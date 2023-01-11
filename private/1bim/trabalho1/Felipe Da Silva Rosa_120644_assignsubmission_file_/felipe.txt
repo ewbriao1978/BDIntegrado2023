@@ -1,0 +1,15 @@
+1) ER:
+* Entidades fortes deveriam ter um atributo identificador. Ex: arquivo e foto
+
+2) Modelo Relacional:
+* Não há necessidade de duas tabelas iguais: seguidor e amigo.
+* Faltou a linha ligando as tabelas usuário e grupo (para caracterizar
+a fk dono_id)
+* para evitar ciclos: um grupo tem membros 
+(tabela usuario_grupo) e estes membros tem publicações
+(caracterizando assim as publicações do grupo)
+
+3) SQL:
+* ok
+
+4) Feed: Nenhum consulta SQL foi encontrada

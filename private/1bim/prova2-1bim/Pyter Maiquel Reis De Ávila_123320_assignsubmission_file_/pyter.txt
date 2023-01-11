@@ -1,0 +1,28 @@
+pyter  (1.2)
+
+1) er:
+
+* faltou um autorelacionamento para cd indicado (-0.2) 
+* faltou o atributo "numero_faixa" no relacionamento entre as entidades musica e cd (-0.2)
+
+2) modelo relacional
+
+* faltou a tabela intermediária entre as tabelas "autor" e "musica" (-0.2)
+* faltou ligar a tabela "musica" na tabela intermediária "faixas" (-0.2)
+* faltou a coluna "numero de faixa" na tabela "faixas" (-0.2)
+* "musica" não poderia estar ligada a tabela "gravadora" (-0.2)
+
+3) script.sql
+
+* evite caracteres especiais para nomes de colunas e tabelas (-0.2)
+* faltou pk composta na tabela "faixas" (-0.2)
+* faltou pk composta na tabela "musica_autores" (-0.2)
+
+4) insert's
+
+5) incorreta (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)
+9)em branco (-0.2)
+

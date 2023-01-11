@@ -1,0 +1,20 @@
+1) ER: 
+* Praticamente, todas as cardinalidades estão invertidas
+* A entidade grupo não deve ter um atributo/propriedade "participante"
+
+2) Modelo Relacional:
+* Falta membros
+* falta dono do grupo
+* falta publicações do grupo
+* falta todas as chaves estrangeiras
+* coluna "participante" na tabela grupo incorreta
+
+
+3) SQL: 
+
+* Nenhuma fk
+* Nenhuma tabela intermediária
+* coluna "dono" definida como texto de forma incorreta
+
+
+4) Feed: Não foi feito o solicitado

@@ -1,0 +1,15 @@
+1) er
+
+2) modelo relacional:
+
+* a cardinalidade de usuário e publicação não é n:n
+* o modelo relacional desenvolvido não prevê amizades onde um dos usuário deseja não ver mais as publicações de um amigo;
+* usuário tem publicações, e membros de grupos tem publicações, ou seja, em publicação deveria ter duas fk's: 1 de usuário e um vindo dos membros (usuario_grupo)
+
+3) sql:
+
+* erros do modelo relacional foram também trazidos pra cá. Ex: cardinalidade incorreta entre as tabelas usuário e publicações
+
+
+
+4) feed: consulta sql do feed não foi construída;

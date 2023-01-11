@@ -1,0 +1,21 @@
+1) ER: 
+* cardinalidade incorreta entre grupo e dono
+* Um grupo tem um único dono (não vários)
+* Cardinalidade incorreta entre mídia e publicação
+Mídia deve estar sempre atrelada a uma publicação
+
+2) Modelo Relacional:
+* Tabelas amigo e amigo_publicação incompreensíveis.
+Já que amigo tb é usuário
+* Erro de cardinalidade entre grupo e publicação já que 
+uma publicação deve ser exclusiva de um grupo
+* Tabela de membros do grupo inexistente
+* Um grupo deve ter um único dono
+
+3) SQL:
+
+* dono não pode ser n:n
+
+
+4) Feed: Não criou o que foi solicitado (Feed)
+

@@ -1,0 +1,40 @@
+Gabryel (1.9)
+
+1) ER:
+
+faltou o atributo "faixa" entre musica e cd (-0.2)
+
+2) Modelo Relacional:
+
+faixa não pode ser "serial". Pq:pode existir várias faixas "1"
+em cd's diferentes (-0.2)
+
+fk_cd incorreta em "Musica" (-0.2)
+
+3) Script.sql:
+
+faltou a instrução SQL de criação do banco; (-0.2)
+
+id na tabela gravadora deveria ser "serial" (-0.2)
+
+id na tabela cd deveria ser "serial" (-0.1)
+id na tabela autor deveria ser "serial" (-0.1)
+id na tabela musica deveria ser "serial" (-0.1)
+
+fk incorreta autor na tabela musica. pq: a cardinalidade entre 
+musica e autor é n:n (e não 1:n) (-0.2)
+
+
+4) INSERT's 
+
+ok
+
+5) errada pois musica não deve ter fk de autor  (-0.2)
+
+6) errada pois musica não deve ter fk de autor (-0.2)
+
+7) ok
+
+8) ok
+
+9)  errada (-0.2)

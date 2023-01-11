@@ -1,0 +1,474 @@
+::::::::::::::
+alexandra.txt  (0.8)
+::::::::::::::
+
+1) ER: 
+* cardinalidade incorreta entre grupo e dono (-0.1)
+* Um grupo tem um único dono (não vários) (-0.1)
+* Cardinalidade incorreta entre mídia e publicação (-0.1)
+Mídia deve estar sempre atrelada a uma publicação 
+
+2) Modelo Relacional:
+* Tabelas amigo e amigo_publicação incompreensíveis. (-0.1) 
+Já que amigo também deve ser um usuário 
+* Erro de cardinalidade entre grupo e publicação já que uma publicação deve ser exclusiva de um grupo (-0.1)
+* Tabela de membros do grupo inexistente (-0.1)
+* Um grupo deve ter um único dono (-0.1)
+
+3) SQL:
+
+* dono não pode ser n:n 
+
+4) Feed: Não criou o que foi solicitado (Feed) (-0.5)
+
+::::::::::::::
+andrews.txt (1.0)
+::::::::::::::
+1) 
+* ER: No ER não há o conceito de fk, ou seja, publicações não deve ter grupo_id (-0.1)
+* No ER deveria estar representado que grupo tem publicações, ou seja, deveria ter um relacionamento entre grupo e publicações ou
+algo (entidade/relacionamento) entre usuário, publicações e grupo (-0.1)
+* Não precisaria existir 2 autorelacionamentos em usuário pois no próprio relacionamento "segue" 
+poderia existir um atributo acompanha ou não acompanha feed 
+
+
+2) Modelo Relacional: 
+Não tem muito sentido Seguidor e Amigo ter exatamente as mesmas colunas, ou seja, exatamente a mesma tabela. Logo, deveria ser a mesma (-0.1)
+As tabelas/colunas devem não ter caracteres especiais e/ou acentos.  
+ex: "Publicação, álbum_id e usuário_id" 
+Para evitar ciclos, poderia ter pensado que um grupo tem membros e membros tem publicações - fazendo que usuários 
+com publicações seja publicações fora de um grupo (individuais)
+Autorelacionamento de album incorreto. (-0.1)
+
+3) SQL: 
+
+pk's pendente (-0.1)
+- tabela amigo deveria ter uma pk
+- tabela seguir deveria ter uma pk
+- membros deveria ter uma pk 
+* album não deveria ter um fk autoreferenciada (-0.1)
+
+4) Feed: Não cumpri o que foi solicitado. (-0.5)
+
+
+::::::::::::::
+canrobert.txt (1,90)
+::::::::::::::
+
+1) ER: ok
+2) Modelo Relacional: ok
+3) SQL: 
+* amizade e usuario_grupo poderiam ter chave primarias compostas (-0.1)
+* Sugestão: as chaves primárias poderia ter somente o nome id (não precisa sufixo com nome da tabela)
+4) Feed:  OK 
+* Dúvida: A consulta cobre publicações vindas de grupos onde o usuário que realizou tal publicação não é meu amigo? No exemplo abaixo (conforme os teus inserts) a publicação do grupo é feita também por um amigo do usuário 1, correto? Caso o usuário da publicação do grupo não fosse amigo do usuário 1, a consulta também estaria correta? 
+
+idusuario | idusuario2 | idgrupo | idpublicacao |      data_hora      |         texto          | idusuario | idgrupo 
+-----------+------------+---------+--------------+---------------------+------------------------+-----------+---------
+  1 |          3 |       1 |            3 | 2022-03-04 14:35:00 | Nulla et rutrum nibh   |         3 |       1
+
+
+::::::::::::::
+danielle.txt (0.5)
+::::::::::::::
+1) ER: 
+* Praticamente, todas as cardinalidades estão invertidas (-0.1)
+* A entidade grupo não deve ter um atributo/propriedade "participante" (-0.1)
+
+2) Modelo Relacional:
+* Falta membros (-0.1)
+* falta dono do grupo (-0.1)
+* falta publicações do grupo (-0.1)
+* falta todas as chaves estrangeiras (-0.1)
+* coluna "participante" na tabela grupo incorreta (-0.1)
+
+
+3) SQL: 
+
+* Nenhuma fk (-0.1)
+* Nenhuma tabela intermediária (-0.1)
+* coluna "dono" definida como texto de forma incorreta (-0.1)
+
+
+4) Feed: Não foi feito o solicitado (-0.5)
+
+::::::::::::::
+doris.txt (0.3)
+::::::::::::::
+
+1) ER:
+
+* A entidade grupo não pode ter um atributo simples "Usuário" (-0.1)
+* Cardinalidade incorreta entre publicação e arquivos de mídia (-0.1)
+(uma publicação pode ter vários arquivos de mídia e um arquivo de mídia
+é exclusivo de uma única publicação)
+
+2) Modelo Relacional:
+* FK's invertidas:  (-0.2)
+- entre arquivos de midia e publicação
+- entre usuário e album 
+- entre album e fotos 
+* FK's incorretas:  (-0.2)
+- grupo_codigo na tabela usuário 
+- usuario_codigo na tabela grupo
+* Tipos definidos para as fk's estão incorretos nas fk's (-0.1)
+* O cardinalidade entre usuario e grupo deveria ser n:n (-0.1)
+* Coluna "administrador" não deveria ser um booleano (deveria ser um fk entre usuário e grupo) (-0.1)
+
+3) Nenhum Create (-0.5)
+ 
+4) SQL: Não foi encontrado nenhum SQL para a construção do feed (-0.5)
+
+::::::::::::::
+felipe.txt (1.2)
+::::::::::::::
+1) ER:
+* Entidades fortes deveriam ter um atributo identificador. Ex: arquivo e foto  (-0.1)
+
+2) Modelo Relacional:
+* Não há necessidade de duas tabelas iguais: seguidor e amigo.
+* Faltou a linha ligando as tabelas usuário e grupo (para caracterizar a fk dono_id)  (-0.1)
+* para evitar ciclos: um grupo deveria ter membros (tabela usuario_grupo) e estes membros tem publicações  (-0.1)
+(caracterizando assim as publicações do grupo)
+
+3) SQL:
+* ok
+
+4) Feed: Nenhum consulta SQL foi encontrada  (-0.5)
+::::::::::::::
+flavio.txt (0.6)
+::::::::::::::
+1) ER:
+
+* Diagramas de Entidade e relacionamento não tem o conceito de chaves
+estrangeiras  (-0.1)
+*  Um grupo deve ter membros, donos e publicações.  (-0.1)
+Logo, não faz sentido a criação da entidade "publicações_grupo" (ainda mais no nível conceitual) (-0.1)
+* O dono do grupo não deve ser um autorelacionamento pois um dono é um usuário - e não outro grupo. (-0.1)
+* Uso incorreto do relacionamento ternário "cria" (-0.1)
+
+2) Modelo Relacional:
+
+* dono deveria ser um fk (-0.1)
+* publicações_grupo deveria ser chamada de "membro' e estar entre as tabelas "usuário" e "grupo" (-0.1)
+
+
+3) SQL:
+* a coluna "membro" não deveria estar na tabela grupo (-0.1)
+* dono não deveria ser um texto (deveria ser um fk referente a usuário) (-0.1)
+
+4) Feed: Consulta sql não realizada (-0.5)
+::::::::::::::
+gabryel.txt (0.2)
+::::::::::::::
+1) ER:
+* faltou definir cardinalidade no autorelacionamento (-0.1) 
+* Quem tem álbum de fotos é Usuário (NÃO arquivo de mídia) (-0.1)
+2) Modelo Relacional:
+* Modelo Relacional não armazena o dono do grupo (-0.1)
+* Modelo Relacional não define amigos/seguidores de um usuário 
+* Modelo Relacional deveria ligar/relacionar album com usuário - e não - com a tabela arquivo_midia (-0.1)
+* Ausência de fk's (-0.2):
+- de usuário em publicação
+- de grupo em publicação
+- de publicação em arquivo_mídia
+- álbum em foto
+3) SQL:
+* email sendo pk não precisaria ser também definido com unique 
+* falta definir um dono para o grupo (-0.1)
+* falta estabelecer amizades (-0.1)
+* falta estabelecer amizades que não acompanham publicações dos amigos (-0.1)
+* id de publicação deveria ser do tipo serial (-0.1)
+* fk incorretas na arquivo_midia (-0.1)
+* uso incorreto de pk composta em arquivo de mídia 
+* id de foto deveria ser do tipo serial (-0.1)
+* a tabela foto deveria ter a fk de album (-0.1)
+
+4) Feed: Consulta solicitada não foi construída. (-0.5)
+::::::::::::::
+geraldo.txt (1.4)
+::::::::::::::
+1) ER:
+* Poderia ter construído uma entidade "membro" e fazer com "membro" (de um grupo) tivesse as publicações (-0.1)
+* Não entendi o atributo pub_grupo na entidade grupo
+* Faltou definir o dono do grupo (-0.1)
+
+2) Modelo relacional
+* Quem cria as publicações de um grupo são os membros e não o próprio grupo (-0.1)
+* não estabelece o dono do grupo (-0.1)
+* a tabela de amizade não reflete o autorelacionamento definido no ER, ou seja, amizade não pode ser uma "cópia" da tabela usuário mas sim receber 2 duas fk's de usuário onde uma seria o próprio usuário e a outra o do seu amigo.
+(-0.1)
+
+3) SQL:
+* Tabela usuário não precisa da coluna pub_user (-0.1)
+* Somente aqui foi possível definir o dono do grupo 
+
+4) Feed: ok
+
+::::::::::::::
+leandro.txt (1.0)
+::::::::::::::
+1) Er:
+ 
+* segue deveria ser um autorelacionamento (-0.1)
+
+* quem cria as publicações de um grupo são os membros  
+daquele grupo. No DER desenvolvido não é possível
+determinar quem publicou o que no grupo (-0.1)
+
+* cardinalidade invertida entre album e foto (-0.1)
+
+* caracter incorreto dentro da cardinalidade "criar" entre as entidades "usuário" e "grupo"  
+2) Modelo Relacional:
+
+dono deveria ser um booleano ou estar diretamente ligada a tabela grupo através de fk vinda de usuário ou membro
+não é possível determinar quem publicou o que dentro de um grupo (-0.1)
+
+faltou destacar que usuario_email dentro de "publicação" é um fk (-0.1)
+
+* grupo tem somente um dono, e não vários. 
+
+3) SQL:
+
+* trouxe erros do modelo relacional 
+
+4) FEed: Não fez a consulta SQL solicitada  (-0.5)
+::::::::::::::
+leonardo.txt (1.0)
+::::::::::::::
+1) er:
+
+* não é possível definir o dono do grupo (-0.1)
+
+* para definir as publicações do grupo, poderia criar uma entidade de membro (Entre usuário e grupo) e fazer com que o membro do grupo
+também tivesse publicações. Desta forma, saberia as publicações do grupo e as publicações exclusivas dos usuários (publicações fora de qualquer grupo)
+(-0.1)
+
+2) modelo relacional:
+
+* não é possível definir as publicações do grupo (-0.1)
+* tabela de amizade deveria ter duas chaves estrangeiras de usuário (-0.1)
+* amizade não precisa da coluna id pois é possível criar uma chave primária composta das fk's 
+
+3) SQL:
+
+* a coluna dono deve ser um booleano (-0.1). Não precisava ser fk 
+
+4) Feed: Não construiu a consulta sql necessária. (-0.5)
+::::::::::::::
+lorrana.txt (1.6)
+::::::::::::::
+1) ER:
+* Não precisaria ter 2 autorelacionamentos em usuário
+* Email não poder ser uma chave parcial de usuário pois usuário é uma entidade forte. Chaves parciais devem ser usadas somente
+em entidades fracas. (-0.2)
+
+
+2) Modelo Relacional:
+
+* Não há necessidade de ter 2 tabelas para "segue usuário" e "amizade". Uma única tabela como uma coluna booleana resolveria.
+* Tabelas compartilhaPublicaçãoUsuário e compartilhaPublicaçãoGrupo são desnecessárias (-0.2)
+
+3) SQL:
+
+* trouxe os problemas do modelo relacional
+
+
+4) Feed: ok
+::::::::::::::
+lucas.txt (1.1)
+::::::::::::::
+1) er
+
+2) modelo relacional:
+
+* a cardinalidade de usuário e publicação não é n:n (-0.1)
+* o modelo relacional desenvolvido não prevê amizades onde um dos usuário deseja não mais ver as publicações de um amigo; (-0.1)
+* usuário tem publicações, e membros de grupos tem publicações, ou seja, em publicação deveria 
+ter duas fk's: 1 de usuário e 1 vinda dos membros (usuario_grupo) (-0.1)
+
+3) sql:
+
+* erros do modelo relacional foram também trazidos pra cá. Ex: cardinalidade incorreta entre as tabelas usuário e publicações
+(-0.1)
+
+
+4) feed: consulta sql do feed não foi construída; (-0.5)
+::::::::::::::
+maicon.txt (1.4)
+::::::::::::::
+1) er:
+
+2) modelo relacional:
+* tabela amizade não pode ter colunas repetidas de usuário (-0.1)
+* facelight é uma tabela desnecessária (-0.1)
+* dentro de um grupo quem publica as publicações são  os membros (não o grupo) (-0.1)
+
+3) sql:
+
+* não precisava da tabela facelight 
+* tabela usuário não deve ter a coluna     publicacao_usuario text (-0.1)
+* grupo não pode ter a coluna     publicacao_grupo text (-0.1)
+* usuario_grupo não deve ter 3 fk's (-0.1)
+
+
+4) feed: ok
+
+
+::::::::::::::
+manuella.txt (1.2)
+::::::::::::::
+1) er:
+
+* amizade não poderia ter um atributo identificador (quem tem atributo identificador são entidades fortes - e não relacionamento)
+(-0.1)
+
+2) modelo relacional:
+
+* Coluna feed_id sem sentido (-0.1)
+* Grupo não poderia ter uma coluna "participante_grupo_id" pois o relacionamento entre usuário e grupo é n:n (-0.1)
+* quem faz as publicações do grupo é o membro (usuário_grupo) e não o usuário (-0.1)
+* é um usuário que tem amigos (que são também outros usuários) (-0.1)
+* não há necessidade da tabela solicitação 
+* amizade deveria ter uma chave primária composta (e não um chave primária simples) (-0.1)
+* amizade deveria estar ligada diretamente a tabela usuário (-0.1)
+
+3) SQL:
+
+FK incorreta de participante na tabela grupo (-0.1)
+coluna feed_id incorreta na tabela publicação (-0.1)
+
+
+4) FEED: ok
+
+
+::::::::::::::
+marcos.txt (1.6)
+::::::::::::::
+
+1) ER: OK
+2) Modelo Relacional: faltou uma linha entre grupo e usuário referente ao dono (-0.2)
+3) SQL:tabelas poderiam estar escritas com minusculo. A tabela Membro não precisava ter uma própria chave primária (poderia ter um chave primária composto com o id do usuário e o id do grupo) (-0.1)
+4) Query: na timeline o usuário não deve ver suas próprias publicações (-0.1)
+
+
+::::::::::::::
+natalia.txt (0.6)
+::::::::::::::
+1) er:
+
+o usuário criador da publicação do grupo deve ser uma instância
+da entidade usuáro, ou seja, publicação grupo também deveria estar ligada
+ou a usuário ou a algum entidade que identificasse os membros daquele grupo
+pois membros do grupo que criam publicações para os grupos (-0.1)
+
+2) modelo relacional:
+
+* a coluna usuario_criador deveria ser uma fk (e não uma coluna text) (-0.1)
+* poderia ter utilizado a mesma tabela de publicação para as publicações do grupo
+* grupo só podem ser criados por um único usuário (-0.1)
+* quem publica no grupo são os membros daquele grupo (que incluí também o dono),
+ou seja, as publicações do grupo (publicação_grupo) deveriam 
+estar ligadas a participante_grupo
+
+3) SQL:
+* usuario_id e amigo_id além de ser chave primária composta deveriam ser fk's (-0.1)
+* grupo_id em cria_grupo deveria ser um fk referente a grupo (-0.1)
+* tabela cria_grupo tem um erro de sintaxe pois grupo_id não tem nenhum tipo de dado definido (-0.2)
+* má prática: álbum tem uma coluna escrita em maiúsculo 
+* não realizou nenhum insert na base de dados (-0.2)
+
+4) Feed: Não fez o que foi solicitado (-0.5)
+
+::::::::::::::
+nicolas.txt (1.7)
+::::::::::::::
+1) ER:
+
+* faltou atributos descritivos (atributos de relacionamentos)
+para o autorelacionamento amizade capazes de dizer  se um determinado usuário está seguindo ou não o feed de um amigo (-0.1)
+* um grupo deve ter somente um dono (-0.1)
+
+2) Modelo Relacional
+
+* faltou a ligação (linha) entre grupo e usuário (-0.1)
+* o recomendável seria que o membro (usuario_grupo) fizesse as publicações de um grupo
+
+3) SQL:
+
+* cuidado com nomes de colunas e/ou tabelas com acentos
+
+4) Feed: ok
+
+
+::::::::::::::
+pedro.txt (0.3)
+::::::::::::::
+1) ER:
+
+* entidade timelipse incorreta
+
+* grupo não pode ter um autorelacionamento com "participante"  
+ 
+* grupo não pode ter um atributo dono_id (pois no diagrama de entidade
+relacionamento não existe o conceito de fk) (-0.1)
+
+* entidade post_realizado incorreta 
+
+* o relacionamento "participante" não pode ter atributos descritos como id_usuario, id_grupo e etc 
+(pois não tem fk's no Entidade Relacionamento) (-0.1)
+
+
+
+2) Modelo Relacional: 
+
+Não foi possível abrir o arquivo .dia (-0.5)
+
+3) SQL: Não foi entregue (-0.5)
+
+4) Feed: Não foi realizado (-0.5)
+::::::::::::::
+pyter.txt (1.0)
+::::::::::::::
+1) er:
+
+faltou as publicações do grupo (-0.1)
+faltou o dono do grupo (-0.1)
+
+
+2) modelo relacional:
+
+* a cardinalidade entre grupo e usuário deveria ser n:n (-0.1)
+
+* faltou as publicações pertencentes ao grupo (-0.1)
+
+
+3) sql
+
+* cuidado com nomes de tabelas com acentos
+
+
+* cuidado com nomes de colunas pouco intuitivos: usuario1, usuario1_segue
+
+
+* não "alimentou" a base de dados (-0.1)
+
+$) feed: Não fez a consulta solicitada (-0.5)
+
+::::::::::::::
+victor.txt (1.9)
+::::::::::::::
+1) er:
+ok
+
+2) modelo relacional:
+
+* usuário_grupo deveria ter uma chave primária composta (-0.1)
+* usuário_grupo poderia ter o nome "membro"
+
+3) SQL:
+
+* ok
+
+4) Feed: Realizou o que foi solicitado
+

@@ -1,0 +1,21 @@
+
+1) ER:
+
+* A entidade grupo não pode ter um atributo simples "Usuário"
+* Cardinalidade incorret entre publicação e arquivos de mídia
+(uma publicação pode ter vários arquivos de mídia e um arquivo de mídia
+é exclusivo de uma única publicação)
+
+2) Modelo Relacional:
+* FK invertida entre arquivos de midia e publicação
+* FK invertida entre usuário e album
+* FK incorreta grupo_codigo na tabela usuário
+* FK incorreta usuario_codigo na tabela grupo
+* Tipos definidos para as fk's estão incorretos nas fk's
+* O cardinalidade entre usuario e grupo deveria ser n:n
+* FK invertida entre as tabelas album e fotos
+* Coluna "administrador" não deveria ser um booleano (deveria ser um fk entre usuário e grupo)
+
+3) Nenhum Create 
+
+4) SQL: Não foi encontrado nenhum SQL para a construção do feed

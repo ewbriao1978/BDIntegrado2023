@@ -1,0 +1,27 @@
+1) Er:
+
+* segue deveria ser um autorelacionamento
+
+* quem cria as publicações de um grupo são os membros 
+daquele grupo. No DER desenvolvido não é possível
+determinar quem publicou o que no grupo
+
+* cardinalidade invertida entre album e foto
+
+* caracter incorreto dentro da cardinalidade "criar" entre as entidades "usuário" e "grupo"
+
+
+2) Modelo Relacional:
+
+dono deveria ser um booleano ou estar diretamente ligada a tabela grupo através de fk vinda de usuário ou membro
+não é possível determinar quem publicou o que dentro de um grupo
+
+faltou destacar que usuario_email dentro de "publicação" é um fk
+
+* grupo tem somente um dono, e não vários.
+
+3) SQL:
+
+Não fez insert's necessários para construir um feed 
+
+4) FEed: Não fez a consulta SQL solicitada

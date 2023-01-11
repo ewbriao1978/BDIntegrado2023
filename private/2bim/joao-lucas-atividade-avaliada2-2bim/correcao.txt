@@ -1,0 +1,24 @@
+
+=======================================
+
+João Lucas (4/4)
+
+1) Questão - Empresa (1/1.0)
+
+- ok
+
+2) Questão JDBC (1/1.0)
+
+- ok
+obs: O arquivo "inserir.java" deveria ser "Inserir.java"
+
+3) Questão - Clínica (1/1.0)
+
+- ok
+
+4) Questão - DCL (1/1.0)
+
+- ok
+obs: fulano deveria ter a senha "fulano"
+
+=======================================

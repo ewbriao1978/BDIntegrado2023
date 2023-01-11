@@ -1,0 +1,26 @@
+1) er:
+
+o usuário criador da publicação do grupo deve ser uma instância
+da entidade usuáro, ou seja, publicação grupo também deveria estar ligada
+ou a usuário ou a algum entidade que identificasse os membros daquele grupo
+pois membros do grupo que criam publicações para os grupos
+
+2) modelo relacional:
+
+* a coluna usuario_criador deveria ser uma fk (e não uma coluna text)
+* poderia ter utilizado a mesma tabela de publicação para as publicações do grupo
+* grupo só podem ser criados por um único usuário
+* quem publica no grupo são os membros daquele grupo (que incluí também o dono),
+ou seja, as publicações do grupo (publicação_grupo) deveriam 
+estar ligadas a participante_grupo
+
+3) SQL:
+* usuario_id e amigo_id além de ser chave primária composta
+deveriam ser fk's
+* grupo_id em cria_grupo deveria ser um fk referente a grupo
+* tabela cria_grupo tem um erro de sintaxe pois grupo_id não tem nenhum
+tipo de dado definido
+* má prática: álbum tem uma coluna escrita em maiúsculo
+* não realizou nenhum insert na base de dados
+
+4) Feed: Não fez o que foi solicitado

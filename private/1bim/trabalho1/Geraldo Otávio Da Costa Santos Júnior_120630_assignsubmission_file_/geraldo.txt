@@ -1,0 +1,16 @@
+1) ER:
+* Poderia ter construído uma entidade "membro" e fazer com "membro" (de um grupo) tivesse as publicações
+* Não entendi o atributo pub_grupo na entidade grupo
+* Faltou definir o dono do grupo
+
+2) Modelo relacional
+* Quem cria as publicações de um grupo são os membros e não o próprio grupo
+* não estabelece o dono do grupo
+* a tabela de amizade não reflete o autorelacionamento definido no ER, ou seja, amizade não pode ser uma "cópia" da tabela usuário mas sim receber 2 duas fk's de usuário onde uma seria o próprio usuário e a outra o do seu amigo.
+
+3) SQL:
+* Tabela usuário não precisa da coluna pub_user
+* Somente aqui foi possível definir o dono do grupo
+
+4) Feed: ok
+

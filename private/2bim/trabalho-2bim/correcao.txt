@@ -1,0 +1,399 @@
+Vicor (2/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+- ok
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+Pyter (1.4/2)
+
+1) Modelo Relacional (0.3/0.4)
+
+- a residência deveria ser ligada a tabela faxina - e não - responsável. (-0.1)
+
+2) script.sql (0.4/0.4)
+
+Obs: a residência deveria ser ligada a tabela faxina - e não - responsável. 
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- não fez o que foi solicitado
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.3/0.4)
+
+- não estabeleceu o comportamento de gatilho da trigger (-0.1)
+
+=======================
+
+Nicolas (1.6/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+- ok
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado
+
+=======================
+
+Natalia (1.8/2)
+
+1) Modelo Relacional (0.2/0.4)
+
+- não modelou o valor acertado e o valor pago (-0.1)
+- no modelo relacional não consta a tabela "freq" (-0.1)
+
+2) script.sql (0.4/0.4)
+
+- o tamanho não precisaria ser, necessariamente, ((nome = 'pequena') OR (nome = 'media') OR (nome = 'grande')),
+- a frequencia poderia ser feita na própria tabela "faxina"
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+==============================
+
+Marcos (1.5/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.3/0.4)
+
+- faltou \c;
+- erros de sintaxe "LINE 1: drop if exists table responsavel;" (-0.1)
+- não precisava colocar o validacpf
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- erro:
+select agendar_faxina(1,1,15);
+ERROR:  query has no destination for result data
+
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+Maicon (1.2/2)
+
+1) Modelo Relacional (0/0.4)
+
+- não fez o que foi solicitado
+
+2) script.sql (0.4/0.4)
+
+- OK
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- OK
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado pela questão 
+
+=======================
+
+Lucas (2/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+obs: faltou o valor acertado
+
+2) script.sql (0.4/0.4)
+
+- ok
+obs: faltou o valor acertado
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+Lorrana (1.2/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+- ok
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0/0.4)
+
+- não fez o que foi solicitado
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado
+
+
+
+========================================
+
+
+Leandro (1.8/2)
+
+1) Modelo Relacional (0.2/0.4)
+
+- não modelou o valor acertado e o valor pago (-0.1)
+- no modelo relacional não consta a tabela "freq" (-0.1)
+
+2) script.sql (0.4/0.4)
+
+- o tamanho não precisaria ser, necessariamente, ((nome = 'pequena') OR (nome = 'media') OR (nome = 'grande')),
+- a frequencia poderia ser feita na própria tabela "faxina"
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+Geraldo (1.6/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+- o tamanho não precisaria ser, necessariamente, ((nome = 'pequena') OR (nome = 'media') OR (nome = 'grande')),
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- não faz o que foi solicitado pela questão - Não agenda nem quinzenalmente, nem mensalmente
+Obs: pq mandar o id de uma faxina para criar novas faxinas?
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+
+Felipe (0.8/2)
+
+1) Modelo Relacional (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+2) script.sql (0.4/0.4)
+
+- ok
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado pela questão
+=======================
+
+Doris (0.8/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok 
+
+2) script.sql (0.4/0.4)
+
+- ok
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado pela questão
+=======================
+
+Danielle (0.6/2)
+
+1) Modelo Relacional (0.3/0.4)
+
+- erro de modelagem: responsável deve ser responsável por uma residência - e não - por uma diarista (-0.05)
+- erro de modelagem: fk de responsável em residência não apresenta ligação de relacionamento da tabela de responsável com a tabela de residência (-0.05)
+
+2) script.sql (0.3/0.4)
+
+- erro nos insert's pois não existe a coluna "acrescimo_desconto" na tabela "faxina" (-0.1)
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado pela questão
+=======================
+Canrobert (2/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+- ok
+- os tamanhos não precisariam ser, necessariamente, só ('PEQUENA', 'MEDIA','GRANDE');
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+=======================
+
+Andrews (2/2)
+
+1) Modelo Relacional (0.4/0.4)
+
+- ok
+
+2) script.sql (0.4/0.4)
+
+ok
+obs1: usar o formato yyyy-mm-dd para as datas
+obs2: os tamanhos não precisariam ser, necessariamente, só ('PEQUENA', 'MEDIA','GRANDE');
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0.4/0.4)
+
+- ok
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0.4/0.4)
+
+- ok
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0.4/0.4)
+
+- ok
+
+=======================
+
+Alexandra (0.4/2)
+
+1) Modelo Relacional (0.2/0.4)
+
+- ERRO de modelagem: a agenda poderia ser feita na própria tabela de faxinas. Por outro lado, mesmo criando uma tabela específica de agendamentos (solução adotada) por que relacionar faxinas que ainda nem foram realizadas (agendadas) com as faxinas que, realmente, aconteceram (tabela faxina)? (-0.1)
+- ERRO de modelagem: a avaliação deveria ser uma coluna da faxina pois uma faxina tem somente uma avaliação - e não - várias. (-0.1)
+ 
+2) script.sql (0.2/0.4)
+
+- erro de sintaxe na criação da tabela "diarista" em "crate table diarista..." (-0.1)
+- erro em diversos insert's que consideram colunas que não existem nas respectivas tabelas. (-0.1)
+
+3) Crie um STORE PROCEDURE que permita agendar quinzenalmente ou mensalmente faxinas em uma determinada residência (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+4) Crie um STORE PROCEDURE que calcule a porcentagem de presenças que uma diarista obteve em suas faxinas ao longo do ano (0/0.4)
+
+- não fez o que foi solicitado pela questão
+
+5) Crie uma TRIGGER que exclua a diarista caso suas presenças fiquem menores que 75% (quando a diarista já tem no mínimo 5 faxinas cadastradas) (0/0.4)
+
+- não fez o que foi solicitado pela questão

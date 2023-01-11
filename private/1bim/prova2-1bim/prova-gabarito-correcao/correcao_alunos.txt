@@ -1,0 +1,803 @@
+::::::::::::::
+alexandra.txt
+::::::::::::::
+Alexandra - 2.2
+
+1) ER:
+
+- faltou modelar o cd_indicado (-0.2)
+
+2) Modelo Relacional:
+
+* se no ER endereço foi definido como atributo composto (cep e numero)
+a tabela Gravadora deveria ter cep e numero ou o modelo relacional deveria ter 
+uma tabela exclusiva para endereço (-0.2)
+
+- faltou modelar o cd_indicado (-0.2)
+
+3) Script.sql
+
+- autor_musica deveria ter uma chave primária composta
+(-0.2)
+
+- faltou a fk cd_indicado em cd (-0.2)
+
+4) INSERT's
+
+- ok
+
+5) OK
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6) ERRADO (-0.2)
+
+7) ERRADO (-0.2)
+
+8) NÃO FEZ (-0.2)
+
+9) ERRADO (-0.2)
+::::::::::::::
+andrews.txt
+::::::::::::::
+Andrews - (2.6)
+
+1) ER:
+
+faixa não pode ser um atributo identificador (-0.2)
+
+2) Modelo Relacional:
+
+como um cd recomenda somente um cd, não era necessário
+criar um tabela indicação. Do modo que o modelo relacional foi construído
+um cd pode indicar vários cd's (e não somente um) (-0.2)
+
+3) Script.sql
+
+autor_musica deveria ter uma chave primária composta (-0.2)
+
+no modelo relacional musica_cd projetou uma chave primária para a tabela musica_cd
+mas aqui no script foi definido uma única chave primária (de forma incorreta) (-0.2)
+
+
+4) INSERT's
+
+- ok
+
+5) OK
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6)  ERRADO (-0.2)
+
+7)  ERRADO (-0.2)
+
+8)  ERRADO (-0.2)
+
+9) ERRADO (-0.2)
+::::::::::::::
+canrobert.txt
+::::::::::::::
+canrobert (3.0)
+
+1) ER:
+
+* faltou cardinalidade entre musica e cd (-0.2)
+
+* 2 atributos "endereço" em gravadora (-0.2)
+
+* recomendação deveria ser definida como um autorelacionamento (-0.2)
+
+2) Modelo Relacional:
+
+* faixa deveria ser definido como integer (-0.2)
+
+3) Script.sql
+
+as chaves definidas como serial não ser "setadas" como aspas (-0.2)
+
+4) INSERT's
+
+ok
+
+5) ok
+
+6) ok
+
+7) ok
+
+obs1: poderia ter usado extract
+obs2:anos deveriam ser inteiros e sem aspas
+
+8) ok
+
+9) ok
+::::::::::::::
+danielle.txt
+::::::::::::::
+Danielle (1.0)
+
+1) ER:
+
+* musica não deve estar ligada a gravadora 
+(além disso, entre entidades é preciso que exista um relacionamento - e no er construído não há) (-0.2)
+* falta cardinalidade entre musica e cd (-0.2)
+* faltou o atributo preço em cd (-0.2)
+
+2) Modelo Relacional:
+
+* fk incorreta (cantor_id) (-0.2)
+* fk incorreta (musica_id) na tabela gravadora (-0.2)
+* faltou a coluna faixa  (-0.2)
+* faltou a tabela intermediária musica_cd (-0.2)
+
+3) Script.sql
+
+* coluna data_lancamento com valor padrão definido de forma incorreta (-0.2)
+* Mesmo não existindo tabela cantor, na tabela gravadora há um chave estrangeira cantor (-0.2)
+* fk incorreta  (musica_id) em gravadora (-0.2)
+* os id's foram definidos como serial e serial é do tipo inteiro. Logo, devem estar sem aspas 
+
+4) INSERT's
+
+* Nos inserts não era preciso colocar os id's já que os mesmos foram definidos como serial (inteiro auto-
+incrementado)
+
+* preço é numeric. Logo, não precisa estar em entre aspas 
+
+* musica não contém a coluna "número". Logo, os INSERT's das músicas não funcionam (-0.2)
+
+5) ok
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6) em branco (-0.2)
+
+7) incorreta (-0.2)
+
+8) em branco (-0.2)
+
+9) incorreta (-0.2)
+::::::::::::::
+doris.txt
+::::::::::::::
+Doris (1.0)
+
+1) ER:
+ 
+* cardinalidade invertida entre cd e gravadora (-0.2)
+
+
+2) Modelo Relacional:
+
+faltou a fk de gravadora em cd (-0.2)
+
+faltou a coluna "faixa" em "cd_musicas" (-0.2)
+
+3) Script.sql
+
+cuidado com colunas/tabelas com acentos
+e caracteres especiais (ex: preço)
+
+faltou pk em cd_musica (-0.2)
+faltou pk em autor_musica (-0.2)
+
+faltou a coluna "faixa" em cd_musica (-0.2)
+
+duas colunas "id" em música (-0.2)
+
+duas colunas "id" em cd (-0.2)
+
+4) INSERT's
+
+erro: datas devem ficar entre aspas (-0.2)
+erro: musica tem a coluna "duração" e não "duracao" (-0.2)
+
+5) (-0.2)
+
+6)  (-0.2)
+
+7)  (-0.2)
+
+8) (-0.2)
+
+9)  (-0.2)
+::::::::::::::
+felipe.txt
+::::::::::::::
+Felipe (2.6)
+
+1) ER:
+
+ok
+
+2) Modelo Relacional:
+
+a indicação/recomendação tem cardinalidade 1:1. Logo, no modelo relacional não deve 
+gerar/provocar uma nova tabela.  O correto seria uma fk na própria tabela cd  (-0.2)
+
+3) Script.sql
+
+a tabela recomenda deveria ter uma pk  (-0.2)
+
+4) INSERT's
+
+ok
+
+5) em branco (-0.2)
+
+6)  em branco (-0.2)
+
+7) errada. (-0.2)
+
+A consulta não obtém cd's publicados depois de 01 de janeiro de 2000 (e deveria compreender cd's lançados até 31/12/20)
+
+8) em branco (-0.2)
+
+9)  errada.  (-0.2)
+
+Precisava de group e having para listar as músicas com a quantidade de autores >= 2 
+SELECT musica.nome AS "Musica", autor.nome AS "Autor" FROM autor_musica INNER JOIN musica ON musica.id = autor_musica.musica_id INNER JOIN autor ON autor_musica.autor_id = autor.id;  
+::::::::::::::
+flavio.txt
+::::::::::::::
+Flavio (1.1)
+
+1) ER:
+
+faltou o atributo "faixa" no relacionamento "tem" entre "cd" e "musica" (-0.2)
+
+2) Modelo Relacional:
+
+faltou a coluna "faixa" na tabela (-0.2)
+
+3) Script.sql:
+
+tipo serial nunca será nulo. Logo, serial not null é redundante (-0.2)
+faltou check no preço da tabela "cd" (-0.2)
+faltou pk em "musica_cd" (-0.2)
+faltou a pk em "autor_musica" (-0.2)
+faltou definir o tipo da coluna "duracao" (-0.2)
+
+4) INSERT's (-0.5)
+
+não funciona pois o script tem erro de sintaxe na linha 23
+
+5)  em branco (-0.2)
+
+6)  em branco (-0.2)
+
+7)  em branco (-0.2)
+
+8)  em branco (-0.2)
+
+9)  em branco (-0.2)
+::::::::::::::
+gabryel.txt
+::::::::::::::
+Gabryel (1.9)
+
+1) ER:
+
+faltou o atributo "faixa" entre musica e cd (-0.2)
+
+2) Modelo Relacional:
+
+faixa não pode ser "serial". Pq:pode existir várias faixas "1"
+em cd's diferentes (-0.2)
+
+fk_cd incorreta em "Musica" (-0.2)
+
+3) Script.sql:
+
+faltou a instrução SQL de criação do banco; (-0.2)
+
+id na tabela gravadora deveria ser "serial" (-0.2)
+
+id na tabela cd deveria ser "serial" (-0.1)
+id na tabela autor deveria ser "serial" (-0.1)
+id na tabela musica deveria ser "serial" (-0.1)
+
+fk incorreta autor na tabela musica. pq: a cardinalidade entre 
+musica e autor é n:n (e não 1:n) (-0.2)
+
+
+4) INSERT's 
+
+ok
+
+5) errada pois musica não deve ter fk de autor  (-0.2)
+
+6) errada pois musica não deve ter fk de autor (-0.2)
+
+7) ok
+
+8) ok
+
+9)  errada (-0.2)
+::::::::::::::
+geraldo.txt
+::::::::::::::
+Geraldo (2.4)
+
+1) ER:
+
+cardinalidade invertida entre as entidades gravadora e cd (-0.2)
+
+
+2) Modelo Relacional:
+
+linha incorreta entre musica e autor_musica (-0.2)
+autor_musica deveria ter uma pk composta (-0.2)
+ausência de fk referente a gravadora na tabela cd (-0.2)
+faltou indicação de um cd (-0.2)
+
+3) Script.sql:
+
+ausência da fk referente a cd na tabela musica_cd (-0.2)
+faltou indicação de um cd (-0.2)
+
+4) INSERT's 
+
+5) deveria ter usado "ilike" 
+para maisculas e minúsculas 
+
+6)  errada (-0.2)
+
+7) ok
+
+8) ok
+
+9) ok
+::::::::::::::
+joao.txt
+::::::::::::::
+João (0.5)
+
+1) ER:
+
+* faltou o atributo faixa no relacionamento entre as entidades música e cd (-0.2)
+
+erros de cardinalidade (-0.2)
+* faltou a cardinalidade mínima da entidade cd no relacionamento com música 
+* faltou a cardinalidade mínima da entidade gravadora no relacionamento com a entidade cd
+
+* faltou o autorelacionamento de indicação de um cd de um outro cd (-0.2)
+
+
+2) Modelo Relacional:
+ 
+* faltou a fk referente a gravadora na tabela cd (-0.2)
+
+ausência de tabela intermediária (resultado de cardinalidades n:n): (-0.2)
+* faltou a tabela intermediária entre autor e música 
+* faltou a tabela intermediária entre cd e música 
+
+* faltou a criação da coluna faixa (-0.2)
+
+
+3) Script.sql:
+
+coluna "faixa" incorreta na tabela cd (-0.2)
+faltou a indicação do cd (-0.2)
+
+fk incorretas (-0.2)
+* fk incorreta de gravadora referenciando gravadora 
+* fk musica_autor incorreta na tabela música pois a cardinalidade de musica e autor deveria ser n:n
+
+erros de sintaxe/tipos não definidos (-0.2):
+* tipo da coluna preço não foi definida (erro de sintaxe) 
+* fk id_gravadora não teve seu tipo definido (erro de sintaxe)
+
+4) INSERT's (-0.5) 
+
+Erro nas criações das tabelas inviabiliza o funcionamento dos INSERT's
+
+5) em branco (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)
+9) em branco (-0.2)
+::::::::::::::
+leandro.txt
+::::::::::::::
+leandro (2.4)
+
+1) er:
+
+faltou um identificador chave na entidade musica (-0.2)
+
+telefone não precisava ser multivalorado (-0.2)
+
+2) relacional:
+
+faltou mostrar o check > 0 de preço(-0.2)
+
+3) script.sql
+
+numero_da_faixa poderia ser definido com integer
+
+
+4) insert's
+
+ok
+
+5) em branco(-0.2)
+6) em branco(-0.2)
+7) em branco(-0.2)
+8) em branco(-0.2)
+9) em branco (-0.2)
+::::::::::::::
+leonardo.txt
+::::::::::::::
+leonardo (1.0)
+
+1) er: 
+
+* faltou o atributo "número da faixa" (-0.2)
+* o autorelacionamento "recomendar" não precisa ter um atributo "recomendo" (-0.2)
+* Dica: os relacionamentos devem ter nomes 
+
+2) modelo relacional:
+
+* faixa não pode ser "serial" já que vários cd's possuem faixas 1, 2 ..... (-0.2)
+* a coluna "id_outro_cd" deve ser uma fk (-0.2)
+* coluna "recomendo" incorreta (-0.2)
+
+
+3) script.sql
+
+* a coluna "id_outro_cd" deve ser uma fk (-0.2)
+* ausência de uma pk composta em autor_musica (-0.2)
+* id_faixa não é uma boa pk para a tabela musica_cd (-0.2)
+
+4) insert's
+
+data e tempo mal formatados (-0.2)
+* LINE 4: ('anos de ouro', 11.99, '24-12-1996', 3, 'true', 2),                     
+* LINE 2: ('anjos', 03:44),
+
+problemas de fk's inexistentes (-0.2):             
+* psql:leonardo.sql:79: ERROR:  insert or update on table "autor_musica" violates foreign key 
+constraint "autor_musica_id_musica_fkey"
+DETAIL:  Key (id_musica)=(2) is not present in table "musica".
+* psql:leonardo.sql:85: ERROR:  insert or update on table "musica_cd" violates foreign key constraint "musica_cd_id_musica_fkey"
+DETAIL:  Key (id_musica)=(1) is not present in table "musica".
+
+5) em branco (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)
+::::::::::::::
+lorrana.txt
+::::::::::::::
+lorrana (3.5)
+
+1) er:
+
+ok
+
+2) modelo relacional:
+
+como um cd indica somente um cd, a cardinalidade não é n:n. Logo, não deve gerar
+uma nova tabela  (-0.2)
+
+
+3) script.sql
+
+ok
+
+4) ok
+
+5) não precisa colocar "_" na condição ilike (-0.1)
+
+6) ok
+
+7) 2000 e 1995 não precisavam ficar entre aspas na condição between
+
+8) ok
+
+
+9) em branco (-0.2)
+::::::::::::::
+lucas.txt
+::::::::::::::
+lucas (3.5)
+
+1) er: ok
+
+2) modelo relacional: ok
+
+3) script.sql
+
+4)  insert's
+
+5) teria que ter usado ilike para "pegar" maiúsculas e minúsculas (-0.1)
+
+6) em branco (-0.2)
+
+7) em branco (-0.2)
+
+8) em branco (-0.2)
+
+9) em branco (-0.2)
+::::::::::::::
+maicon.txt
+::::::::::::::
+maicon (1.4)
+
+1) er: 
+
+o autorelacionamento "recomendar" não precisava ter os atributos id e nome_cd (-0.2)
+
+o atributo "numero_faixa" deveria estar no relacionamento "esta" entre as entidades musica e cd (-0.2)
+
+
+2) modelo relacional
+
+como um cd pode indicar somente um cd não havia necessidade da criação de uma nova tabela "recomendar_cd" (-0.2)
+
+a tabela "musica_cd" deve ter uma coluna "numero_faixa"(-0.2)
+a tabela "cd" não deveria ter uma coluna "numero_faixa" (-0.2)
+faltou uma coluna fk "gravadora_id" dentro da tabela "cd" (-0.2)
+faltou definir a pk de autor_musica (-0.2)
+faltou definir a pk de musica_cd (-0.2)
+
+3) script.sql
+
+gravadora não deve ter um fk de autor (-0.2)
+faltou a fk de gravadora em cd (-0.2)
+
+4) insert's
+
+5) ok
+
+6) incorreta (-0.2)
+
+7) ok
+
+8) em branco (-0.2)
+
+9) em branco (-0.2)
+
+::::::::::::::
+manuella.txt
+::::::::::::::
+Manuella (1.8)
+
+1) er:
+
+faixa não deveria ser uma entidade (-0.2)
+
+faltou definir a cardinalidade do autorelacionamento "recomenda" (-0.2)
+
+2) modelo relacional:
+
+como um cd pode indicar somente um cd não era preciso criar uma nova
+tabela "recomendação" (-0.2)
+
+valor default da data de lançamento incorreta (-0.2)
+
+
+3) script.sql:
+
+faltou definir a pk de musica_cd (-0.2)
+
+4) insert's 
+faltou realizar os insert's de musica_cd  (-0.2)
+
+5) incorreta (-0.2)
+6) incorreta (-0.2)
+7) incorreta (-0.2)
+8) incorreta (-0.2)
+9) incorreta (-0.2)
+
+
+::::::::::::::
+marcos.txt
+::::::::::::::
+marcos (3.3)
+
+1) er:
+
+"recomendação" não pode ser um atributo (-0.2)
+
+telefone e contato não precisavam ser entidades
+
+
+2) modelo relacional:
+
+tabelas intermediárias deveriam ter pk composta (-0.2)
+
+3) script.sql
+
+dica: não criar tabelas/colunas com caracteres especiais ou com alguma letra maiúscula
+
+4) insert's
+
+
+5) poderia ter feito no mesmo ilike (-0.1)
+6) ok
+7) ok
+8) em branco (-0.2)
+9) ok
+
+::::::::::::::
+natalia.txt
+::::::::::::::
+natalia (1.4)
+
+1) er:
+
+faixa não pode ser um atributo da entidade "cd" (-0.2) 
+
+2) relacional:
+
+como um cd pode indicar um único cd (conforme definido no er) não há necessidade de se criar uma outra tabela "recomendar" (-0.2)
+ 
+faixa não deve estar na tabela "cd" (-0.2)
+faixa não deve ser pk da tabela "cd" (-0.2)
+
+uma gravadora produz cd's e um cd é gravado, exclusivamente, em uma única gravadora. Logo, não havia necessidade
+de uma tabela "cd_gravadora" (-0.2) pois o relacionamento/cardinaldidade é 1:n e não n:n
+
+
+3) script.sql
+
+erro de sintaxe: (-0.2)
+psql:natalia.sql:35: ERROR:  syntax error at or near "primary"
+LINE 2:     id_cd primary key integer references cd(id),
+
+
+
+4) insert
+
+erro de sintaxe: (-0.2)
+psql:natalia.sql:59: ERROR:  syntax error at or near "2"
+LINE 1: (2,'Anita');         ^
+psql:natalia.sql:60: ERROR:  syntax error at or near "3"
+LINE 1: (3,'Luiza Sonza');         ^
+psql:natalia.sql:61: ERROR:  syntax error at or near "4"
+LINE 1: (4,'Baco exu do blues');
+       ^
+erro de sintaxe: (-0.2)
+psql:natalia.sql:64: ERROR:  invalid input syntax for type time: "6"
+LINE 2: (11,'6','Olhos castanhos');            ^
+psql:natalia.sql:65: ERROR:  syntax error at or near "12"
+LINE 1: (12,'3','Envolver');         ^
+psql:natalia.sql:95: ERROR:  syntax error at or near "13"
+LINE 1: (13,'2','cigana')
+
+
+5) incorreta (-0.2)
+
+6) em branco (-0.2)
+
+7) em branco (-0.2)
+ 
+8) em branco (-0.2)
+
+9) em branco (-0.2)
+::::::::::::::
+nicolas.txt
+::::::::::::::
+nicolas (3.0):
+
+1) er:
+
+faltou definir a cardinalidade do autorelacionamento (-0.2)
+
+2) modelo relacional:
+
+preço não pode ser definido como "Text" (-0.2)
+
+3) script.sql
+
+dica: evitar caracteres especiais para nomes de tabelas e colunas
+
+4) insert's
+
+5) deveria ter usado ilike 
+6) incorreta (-0.2)
+7) ok
+8) em branco (-0.2)
+9) em branco (-0.2)
+
+::::::::::::::
+pedro.txt
+::::::::::::::
+pedro (3.2)
+
+1) er:
+
+relacionamento "está" não deveria ter um atributo identificador (-0.2)
+
+cardinalidade incorreta no autorelacionamento "indicação" (-0.2)
+
+
+2) modelo relacional:
+
+tabelas intermediárias resultantes de cardinalidades n:n devem 
+ter chave primária composta (-0.2)
+
+como um cd indica/recomenda exclusivamente um outro cd não era preciso
+uma tabela "indicação" (-0.2)
+
+3) script.sql
+
+ok
+
+4) insert's - ok
+
+5) poderia ter feito em um único ilike 
+
+6) ok
+
+7) ok
+
+8) ok
+
+9) ok
+
+::::::::::::::
+pyter.txt
+::::::::::::::
+pyter  (1.2)
+
+1) er:
+
+* faltou um autorelacionamento para cd indicado (-0.2) 
+* faltou o atributo "numero_faixa" no relacionamento entre as entidades musica e cd (-0.2)
+
+2) modelo relacional
+
+* faltou a tabela intermediária entre as tabelas "autor" e "musica" (-0.2)
+* faltou ligar a tabela "musica" na tabela intermediária "faixas" (-0.2)
+* faltou a coluna "numero de faixa" na tabela "faixas" (-0.2)
+* "musica" não poderia estar ligada a tabela "gravadora" (-0.2)
+
+3) script.sql
+
+* evite caracteres especiais para nomes de colunas e tabelas (-0.2)
+* faltou pk composta na tabela "faixas" (-0.2)
+* faltou pk composta na tabela "musica_autores" (-0.2)
+
+4) insert's
+
+5) incorreta (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)
+9)em branco (-0.2)
+
+::::::::::::::
+victor.txt
+::::::::::::::
+victor (3.2)
+
+1) er:
+
+numero faixa não devia ser um atributo da entidade cd mas sim do relacionamento entre musica e cd
+(-0.2)
+
+2) modelo relacional:
+
+* a tabela autor_musica deveria ter uma pk composta (-0.2)
+* musica_id e cd_id não podem ter do tipo "serial" (-0.2)
+
+3) script.sql
+
+4) insert's
+
+5) ok
+6) ok
+músicas sem autores não precisavam ter tuplas em "autor_música"
+Somente por causa do insert null,7 em autor_música que a consulta funcionou
+7) ok
+poderia ter usado o extract para extrair o ano da data
+8) ok
+9) incorreta (faltou o having) (-0.2)
+

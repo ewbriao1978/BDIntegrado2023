@@ -1,0 +1,24 @@
+1) ER:
+
+* entidade timelipse incorreta
+
+* grupo não pode ter um autorelacionamento com "participante"
+
+* grupo não pode ter um atributo dono_id (pois no diagrama de entidade
+relacionamento não existe o conceito de fk)
+
+* entidade post_realizado incorreta
+
+* o relacionamento "participante" não pode ter
+atributos descritos como id_usuario, id_grupo e etc 
+(pois não tem fk's no Entidade Relacionamento)
+
+
+
+2) Modelo Relacional: 
+
+Não foi possível abrir o arquivo .dia
+
+3) SQL: Não foi entregue
+
+4) Feed: Não foi realizado

@@ -1,0 +1,34 @@
+canrobert (3.0)
+
+1) ER:
+
+* faltou cardinalidade entre musica e cd (-0.2)
+
+* 2 atributos "endereço" em gravadora (-0.2)
+
+* recomendação deveria ser definida como um autorelacionamento (-0.2)
+
+2) Modelo Relacional:
+
+* faixa deveria ser definido como integer (-0.2)
+
+3) Script.sql
+
+as chaves definidas como serial não ser "setadas" como aspas (-0.2)
+
+4) INSERT's
+
+ok
+
+5) ok
+
+6) ok
+
+7) ok
+
+obs1: poderia ter usado extract
+obs2:anos deveriam ser inteiros e sem aspas
+
+8) ok
+
+9) ok

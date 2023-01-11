@@ -1,0 +1,36 @@
+maicon (1.4)
+
+1) er: 
+
+o autorelacionamento "recomendar" não precisava ter os atributos id e nome_cd (-0.2)
+
+o atributo "numero_faixa" deveria estar no relacionamento "esta" entre as entidades musica e cd (-0.2)
+
+
+2) modelo relacional
+
+como um cd pode indicar somente um cd não havia necessidade da criação de uma nova tabela "recomendar_cd" (-0.2)
+
+a tabela "musica_cd" deve ter uma coluna "numero_faixa"(-0.2)
+a tabela "cd" não deveria ter uma coluna "numero_faixa" (-0.2)
+faltou uma coluna fk "gravadora_id" dentro da tabela "cd" (-0.2)
+faltou definir a pk de autor_musica (-0.2)
+faltou definir a pk de musica_cd (-0.2)
+
+3) script.sql
+
+gravadora não deve ter um fk de autor (-0.2)
+faltou a fk de gravadora em cd (-0.2)
+
+4) insert's
+
+5) ok
+
+6) incorreta (-0.2)
+
+7) ok
+
+8) em branco (-0.2)
+
+9) em branco (-0.2)
+

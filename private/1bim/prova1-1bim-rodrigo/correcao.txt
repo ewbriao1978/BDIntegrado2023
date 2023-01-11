@@ -1,0 +1,82 @@
+::::::::::::::
+rodrigo.txt
+::::::::::::::
+Rodrigo (4.8)
+
+1) ER:
+
+* O ER fica na Modelagem Conceitual (-0.2) 
+
+* A cardinalidade incorreta entre autor e música pois uma música por ser composta por vários autores e um autor pode compor várias músicas  (-0.2)
+
+* Duração não deveria ser uma entidade, deveria ser um atributo (-0.2)
+
+* Número da faixa não deveria ser um atributo de cd - mas sim - um atributo do relacionamento entre as entidades musica e cd  (-0.2)
+
+* Faltou o autorelacionamento que representa a indicação de um cd por outro cd  (-0.2)
+
+* Ausentes os atributos data de lançamento e preço da entidade cd (-0.2)
+
+2) Modelo Relacional:
+
+* tipo incorreto para a coluna tempo (-0.2)
+* Duração deveria ser uma coluna de música (-0.2)
+* Faltou a tabela faixa (-0.2)
+* Faltou na tabela cd uma fk referente a cd representando o autorelacionamento e capacidade de um cd indicar outro cd (-0.2)
+
+3) Script.sql:
+
+erros de sintaxe:
+
+* psql:rodrigo.sql:14: ERROR:  relation "musica" does not exist   (-0.2)
+* psql:rodrigo.sql:31: ERROR:  syntax error at or near ","  (-0.2)
+LINE 5: )
+
+                 
+4) INSERT's:
+
+erros de sintaxe:
+
+psql:rodrigo.sql:51: ERROR:  relation "autor_musica" does not exist  (-0.2)
+LINE 1: insert into autor_musica (autor_id, musica_id) values
+
+psql:rodrigo.sql:63: ERROR:  relation "duracao" does not exist  (-0.2)
+LINE 1: insert into duracao (tempo, musica_id, autor_id) values
+                    ^
+psql:rodrigo.sql:69: ERROR:  relation "cd" does not exist (-0.2)
+LINE 1: insert into cd (nome, preco, data_lancamento, gravdadora_id)...
+
+5) CORRETA com DESCONTOS:
+
+* Deveria ter usado ilike para pegar tanto caracteres maiúsculos como minúsculos (-0.1)
+
+* Poderia ter feito sem AND. EX: SELECT nome FROM autor WHERE nome ILIKE 'R%O'; (-0.1)
+
+6) ERRADA (-0.5)
+
+* WHERE sem clásula 
+
+* condição null errada (o correto seria is null) 
+
+Correto seria: SELECT musica.nome FROM musica WHERE id NOT IN (SELECT musica_id FROM musica_autor);
+
+7) ERRADA (-0.5)
+
+Correto seria: 
+1) SELECT nome, data_lancamento FROM cd WHERE extract(year from data_lancamento) >= 1995 AND extract(year from data_lancamento) <= 2000; 
+2) Utilizando BETWEEN
+
+8) ERRADA (-0.5)
+
+* Não era necessário agrupar por cd.nome 
+
+O correto seria:
+SELECT gravadora.nome, avg(cd.preco), max(cd.preco), min(cd.preco), count(*) FROM gravadora INNER JOIN cd ON (gravadora.id = cd.gravadora_id) GROUP BY gravadora.nome;
+ 
+9) ERRADA (-0.5)
+
+* Faltou a condição having 
+
+O correto seria: 
+SELECT musica.nome, count(*) FROM autor INNER JOIN musica_autor ON (autor.id = musica_autor.autor_id)
+INNER JOIN musica ON (musica.id = musica_autor.musica_id) GROUP BY musica.nome HAVING count(*) >= 2;

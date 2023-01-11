@@ -1,0 +1,18 @@
+1) er:
+
+* não é possível definir o dono do grupo
+
+* para definir as publicações do grupo, poderia criar uma entidade de membro (Entre usuário e grupo) e fazer com que o membro do grupo
+também tivesse publicações. Desta forma, saberia as publicações do grupo e as publicações exclusivas dos usuários (publicações fora de qualquer grupo)
+
+2) modelo relacional:
+
+* não é possível definir as publicações do grupo
+* tabela de amizade deveria ter duas chaves estrangeiras de usuário
+* amizade não precisa da coluna id pois é possível criar uma chave primária composta das fk's
+
+3) SQL:
+
+* a coluna dono deve ser um booleano. Não precisava ser fk
+
+4) Feed: Não construiu a consulta sql necessária.

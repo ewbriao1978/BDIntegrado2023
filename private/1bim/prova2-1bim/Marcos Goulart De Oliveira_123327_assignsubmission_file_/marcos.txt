@@ -1,0 +1,26 @@
+marcos (3.3)
+
+1) er:
+
+"recomendação" não pode ser um atributo (-0.2)
+
+telefone e contato não precisavam ser entidades
+
+
+2) modelo relacional:
+
+tabelas intermediárias deveriam ter pk composta (-0.2)
+
+3) script.sql
+
+dica: não criar tabelas/colunas com caracteres especiais ou com alguma letra maiúscula
+
+4) insert's
+
+
+5) poderia ter feito no mesmo ilike (-0.1)
+6) ok
+7) ok
+8) em branco (-0.2)
+9) ok
+

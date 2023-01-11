@@ -1,0 +1,27 @@
+Danielle (0.7/4)
+
+1) Modelo Relacional (valor recebido: 0.5/1.0):
+
+- não criou os schemas solicitados pela questão (-0.1)
+- não criou nenhuma fk (-0.1)
+- não colocou a cláusula unique na coluna cpf da tabela telespectador (-0.1)
+- não acrescentou nenhuma cláusula check (nem na coluna duração, nem na coluna poltrona, nem na coluna capacidade, nem na coluna setor) (-0.1)
+- não colocou a valor default (CURRENT_TIMESTAMP) na coluna data_hora_entrada da tabela turno (-0.1)
+
+2) Stored Procedure - Validação de CPF (Valor recebido: 0.2/0.5)
+
+construiu o stored procedure mas: 
+- não incorporou o stored procedure à base de dados da questão 1 (-0.1) 
+- tão pouco acrescentou a cláusula check da coluna cpf da tabela telespectador (-0.1)
+
+3) Stored Procedure - Cálculo do Salário (Valor recebido: 0/1.0):
+
+- não implementou o que foi solicitado na questão
+
+4) Trigger - Primeiro Turno para um Novo Funcionário (Valor recebido: 0/1.0)
+
+- em branco
+
+5) View (Valor recebido: 0/0.5):
+
+- não implementou o que foi solicitado na questão

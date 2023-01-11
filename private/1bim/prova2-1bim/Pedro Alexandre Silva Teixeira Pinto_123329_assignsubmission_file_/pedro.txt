@@ -1,0 +1,33 @@
+pedro (3.2)
+
+1) er:
+
+relacionamento "está" não deveria ter um atributo identificador (-0.2)
+
+cardinalidade incorreta no autorelacionamento "indicação" (-0.2)
+
+
+2) modelo relacional:
+
+tabelas intermediárias resultantes de cardinalidades n:n devem 
+ter chave primária composta (-0.2)
+
+como um cd indica/recomenda exclusivamente um outro cd não era preciso
+uma tabela "indicação" (-0.2)
+
+3) script.sql
+
+ok
+
+4) insert's - ok
+
+5) poderia ter feito em um único ilike 
+
+6) ok
+
+7) ok
+
+8) ok
+
+9) ok
+

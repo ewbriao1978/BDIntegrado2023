@@ -1,0 +1,44 @@
+Danielle (1.0)
+
+1) ER:
+
+* musica não deve estar ligada a gravadora 
+(além disso, entre entidades é preciso que exista um relacionamento - e no er construído não há) (-0.2)
+* falta cardinalidade entre musica e cd (-0.2)
+* faltou o atributo preço em cd (-0.2)
+
+2) Modelo Relacional:
+
+* fk incorreta (cantor_id) (-0.2)
+* fk incorreta (musica_id) na tabela gravadora (-0.2)
+* faltou a coluna faixa  (-0.2)
+* faltou a tabela intermediária musica_cd (-0.2)
+
+3) Script.sql
+
+* coluna data_lancamento com valor padrão definido de forma incorreta (-0.2)
+* Mesmo não existindo tabela cantor, na tabela gravadora há um chave estrangeira cantor (-0.2)
+* fk incorreta  (musica_id) em gravadora (-0.2)
+* os id's foram definidos como serial e serial é do tipo inteiro. Logo, devem estar sem aspas 
+
+4) INSERT's
+
+* Nos inserts não era preciso colocar os id's já que os mesmos foram definidos como serial (inteiro auto-
+incrementado)
+
+* preço é numeric. Logo, não precisa estar em entre aspas 
+
+* musica não contém a coluna "número". Logo, os INSERT's das músicas não funcionam (-0.2)
+
+5) ok
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6) em branco (-0.2)
+
+7) incorreta (-0.2)
+
+8) em branco (-0.2)
+
+9) incorreta (-0.2)

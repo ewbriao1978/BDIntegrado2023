@@ -1,0 +1,31 @@
+Geraldo (2.4)
+
+1) ER:
+
+cardinalidade invertida entre as entidades gravadora e cd (-0.2)
+
+
+2) Modelo Relacional:
+
+linha incorreta entre musica e autor_musica (-0.2)
+autor_musica deveria ter uma pk composta (-0.2)
+ausência de fk referente a gravadora na tabela cd (-0.2)
+faltou indicação de um cd (-0.2)
+
+3) Script.sql:
+
+ausência da fk referente a cd na tabela musica_cd (-0.2)
+faltou indicação de um cd (-0.2)
+
+4) INSERT's 
+
+5) deveria ter usado "ilike" 
+para maisculas e minúsculas 
+
+6)  errada (-0.2)
+
+7) ok
+
+8) ok
+
+9) ok

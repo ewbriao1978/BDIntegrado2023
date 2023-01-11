@@ -1,0 +1,267 @@
+\documentclass[12pt]{exam}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+% Please add the following required packages to your document preamble:
+\usepackage{booktabs}
+
+\graphicspath{{figuras/}}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{textcomp,lmodern,listings}
+\lstset{language=SQL,basicstyle=\ttfamily, columns=fullflexible, upquote, morekeywords={data,wrapper,library,language}}
+
+\newcommand{\disciplina}{Banco de Dados}
+\newcommand{\class}{\disciplina}
+\newcommand{\term}{Prof. Igor Avila Pereira}
+\newcommand{\bimestre}{2}
+\newcommand{\valor}{4}
+\newcommand{\examnum}{Ativ. Avaliada 2 - \bimestreº Bim. - Valor: \valor}
+%\newcommand{\examdate}{xx}
+%\newcommand{\timelimit}{4 horas}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class} - {Página \thepage\ de \numpages}
+\runningheadrule
+
+% https://math.mit.edu/~psh/exam/examdoc.pdf
+% caixinha em vez de bolinha
+\checkboxchar{$\Box$}
+% reposta com caixinha preta em vez de checked
+\checkedchar{$\blacksquare$}
+% mostrar as respostas
+\printanswers
+
+% trocar a palavra point(s) por nada
+\pointname{}
+% https://groups.google.com/g/latex-br/c/DHdjfnfN90M
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Nome:} & \makebox[2in]{\hrulefill}   \\
+\textbf{\examnum} & \textbf{Matrícula:} & \makebox[2in]{\hrulefill}   \\
+%\textbf{\examnum} &&\\
+%\textbf{\examdate} &&\\
+\textbf{\term} &&\\
+%\textbf{Duração: \timelimit}
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+\noindent
+%rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+
+\question[1.0] Construa as instruções DDL necessárias para construir um B.D capaz de armazenar as informações cadastrais dos funcionários de uma empresa.  \label{q:dados_cadastrais_funcionario} 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.6]{figuras/dados_cadastrais_funcionario.png}
+    % \caption{Caption}
+    \label{fig:dados_cadastrais_funcionario}
+\end{figure}
+
+% \vspace{10px}
+
+\textbf{Observações:}
+
+\begin{itemize}
+    \item cpf do funcionário é um campo único;
+    \item endereço é o campo textual atômico;
+    \item Leve em consideração que o funcionário pode ter vários cargos  (ocupações) e dependentes.
+    \item No próprio B.D deve ser possível consultar e armazenar os nomes de todos os cargos possíveis que um funcionário pode ter dentro %do organograma 
+    da empresa;
+    \item um dependente é dependente de um único funcionário;
+    % \item ao longo de sua carreira, um funcionário pode ter tido diversos cargos (ocupações); 
+\end{itemize}
+
+
+\question[1.0] Implemente em JAVA um sistema de cadastro de funcionários para empresa da questão \ref{q:dados_cadastrais_funcionario}. 
+
+% \vspace{10px}
+
+\textbf{Observações:}
+
+\begin{itemize}
+    \item Utilize JAVA/JDBC e PostgreSQL
+    \item Utilize a mesma base de dados criada na questão \ref{q:dados_cadastrais_funcionario};
+    \item A utilização do padrão DAO é opcional;
+    \item Pode usar qualquer IDE/Editor;
+\end{itemize}
+
+% \newpage
+
+     \textbf{\underline{IMPORTANTE:}} 
+     
+    \begin{itemize} 
+     \item Nesta questão, utilize \textbf{\underline{SOMENTE}} os seguintes campos de funcionário:
+    %  \begin{itemize} 
+        %  \item  
+        \textbf{cpf},
+        %  \item 
+        \textbf{nome},
+        %  \item 
+        \textbf{estado civil},
+        %  \item 
+        \textbf{endereço},
+        %  \item 
+        \textbf{nacionalidade},
+        %  \item 
+        \textbf{rg},
+        %  \item 
+        \textbf{telefone} e 
+        %  
+        \textbf{sexo}: 
+    %  \end{itemize}
+        \begin{itemize}
+            \item Lembrando, mais uma vez, que \textbf{endereço} é o campo textual (atômico);
+            \item o \textbf{cpf} pode ser usado como chave primária. Entretanto, se achar necessário, crie um id. 
+            \item Desconsidere, nesta questão, os demais campos da ficha de cadastro dos funcionários (ex: data de nascimento e data de admissão);
+            \item Desconsidere também o cadastro de Cargos, Dependentes e Ocupações;
+        \end{itemize}
+\end{itemize}
+
+
+\question[1.0] Construa as instruções DDL necessárias para construir um B.D capaz de armazenar as informações contidas nas fichas médicas de todos os pacientes de uma clínica. %Leve em consideração que o CRM do médico serve para identificá-lo unicamente. 
+\label{q:fica_medica}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.4]{figuras/ficha_medica}
+    % \caption{Caption}
+    \label{fig:ficha_medica}
+\end{figure}
+
+\textbf{Observações:}
+
+\begin{itemize}
+    \item O \textbf{número do paciente}, o \textbf{número da consulta} e o \textbf{crm do médico} são campos \textbf{únicos};
+    \item uma consulta é realizado por um paciente e um médico;
+    \item um exame é de um paciente e está ligado a uma consulta (por meio do número da consulta);
+    \item No próprio B.D deve ser possível consultar e armazenar todos os convênios disponíveis;
+    \item No próprio B.D deve ser possível consultar e armazenar todos os exames disponíveis; %para um paciente realizar; 
+    \item ao longo de sua vida, um paciente pode ter feito diversas consultas com diversos médicos e ter realizado inúmeros exames; 
+\end{itemize}
+
+% \question (1.0) Escolha um dos BD's desenvolvidos pelas questões   \ref{q:dados_cadastrais_funcionario} e \ref{q:fica_medica} e crie:
+
+\question[1.0] Crie para o B.D da clínica da questão  \ref{q:fica_medica}:
+
+\begin{itemize}
+    \item 1 \textit{superuser}: \textbf{fulano} com senha \textbf{fulano};
+    \item 1 usuário que pode \textbf{\underline{somente} consultar}: \textbf{ciclano} com senha 
+    \textbf{ciclano};
+    % (fazer SELECT) nas tabelas do B.D;
+\end{itemize}
+
+
+
+% \textbf{Dicas:} CREATE SCHEMA, SET search\underline{\hspace{0.3cm}}path TO;
+% % \begin{itemize}
+% %     \item \textbf{Obs:} respeite nomes de tabelas/colunas/schemas, restrições de integridade e definição de schemas.
+% % \end{itemize}
+
+% \begin{figure}[!htp]
+% \centering
+% \includegraphics[width=1\linewidth]{figuras/prova1-2bim_2022.png}
+% \end{figure}
+
+
+
+% \question (0.5) Construa um STORE PROCEDURE de validação para a coluna \textit{cpf} da tabela \textbf{telespectador}.
+
+% \vspace{2px}
+
+%  \textbf{Observações:}
+
+%     \begin{itemize}
+%         \item Será preciso acrescentar o STORE PROCEDURE de validação à cláusula (\textit{check}) da coluna \textit{cpf} (tabela \textbf{telespectador});
+%     \end{itemize}
+
+% \textbf{Dicas:}
+
+%     \begin{itemize}
+%   \item A função desenvolvida nas aulas pode ser usada. Se não possuir a função em mãos, será preciso implementá-la novamente.
+   
+%   \item Lembrando que 00000000000, 11111111111, 22222222222, 33333333333, 44444444444, 55555555555, 66666666666, 77777777777, 88888888888 e 99999999999 também são cpf's \textbf{INVÁLIDOS};
+%   \end{itemize}
+  
+% \question (1.0) Sabendo que os Funcionários realizam diversos turnos, construa um STORED PROCEDURE que calcule o salário de um determinado funcionário mediante o número de horas trabalhadas por ele durante o mês atual (mês corrente). 
+
+% \vspace{2px}
+
+% \textbf{Observações:} 
+
+% \begin{itemize}
+%     \item Este STORED PROCEDURE deve ter como \textbf{parâmetros de entrada}: 
+%     \begin{itemize}
+%         \item o \textbf{id do funcionário} e,
+%         \item o \textbf{valor da hora trabalhada} de acordo com o seu setor:
+%         \begin{itemize}
+% \item Funcionários da \underline{\textbf{LIMPEZA}} ganham R\$ 10 por hora trabalhada,
+% \item Funcionários do \underline{\textbf{ATENDIMENTO}} ganham R\$ 15 e,
+% \item Funcionários da \underline{\textbf{OPERAÇÃO}} ganham R\$ 20.
+% \end{itemize}
+%     \end{itemize}
+%     \item Só vale turnos que começam e terminam no mesmo mês, ou seja, data\underline{\hspace{0.2cm}}hora\underline{\hspace{0.2cm}}entrada e data\underline{\hspace{0.2cm}}hora\underline{\hspace{0.2cm}}saida pertencem ao mesmo mês (mês atual);
+% \item Utilize os seguintes \textbf{casos de teste}: 
+% \begin{itemize}
+%     \item 1 funcionário de cada setor: LIMPEZA, ATENDIMENTO e OPERAÇÃO e,
+%     \item 2 turnos diferentes de trabalho para cada funcionário;
+% \end{itemize} 
+% \item \textbf{\underline{IMPORTANTE:}} Caso facilite o cálculo, é \textbf{permitido considerar somente horas inteiras/completas de cada turno de trabalho}: 
+% \begin{itemize}
+%     \item \textbf{Ex:} 
+%     \begin{enumerate}
+%         \item Em um turno que durou 3 horas, 30 minutos e 45 segundos, é permitido considerar somente 3 horas.
+%         \item Em um turno de 04:59, é permitido considerar somente 4 horas.
+%     \end{enumerate}
+% \end{itemize}
+% \end{itemize}
+
+% \textbf{Dicas:} EXTRACT, FOR LOOP, CAST e etc.
+
+% \question (1.0) Construa uma TRIGGER que, a cada novo funcionário, crie um novo turno de trabalho para este funcionário recém cadastrado.
+
+% \vspace{2px}
+
+% \textbf{Observações:}
+
+% \begin{itemize}
+%     \item 
+%     Este novo turno de trabalho deve começar no dia seguinte ao dia atual do cadastramento/inserção e deve começar às 08:00 (oito da manhã).
+% \item A sala onde este funcionário irá trabalhar em seu primeiro turno de trabalho deve ser escolhida aleatoriamente entre as salas já existentes. 
+% % \item \textbf{Obs:} Os tipos das colunas da tabela \textbf{funcionario\underline{\hspace{0.3cm}}sala} (que representa o turno de trabalho) não devem ser alterados.
+% \end{itemize}
+
+% \textbf{Dicas:} ORDER BY RANDOM(), LIMIT, CURRENT\underline{\hspace{0.3cm}}DATE + INTERVAL '1 day'.
+
+% \question (0.5) Construa uma \textit{view} que retorne o \textbf{nome da sala}, o \textbf{título do filme}, o \textbf{nome do telespectador}, a \textbf{data} e \textbf{hora} da sessão, o \textbf{corredor} e a \textbf{poltrona} escolhidos de cada ingressos vendido. \textbf{Obs:} retornar a coluna \textbf{data} no formato dd/mm/aaaa.
+
+% % Ex:
+
+% % \begin{table}[]
+% % \begin{tabular}{@{}|c|c|c|c|c|c|c|@{}}
+% % \toprule
+% % \textbf{sala\_nome} & filme\_titulo & \textbf{telespectador\_nome} & \textbf{data} & \textbf{hora} & \textbf{corredor} & \textbf{poltrona} \\ \midrule
+% % 4k                  & TOP GUN       & igor                         & 2022-06-03    & 08:00         & A                 & 1                 \\ \midrule
+% % 4k                  & TOP GUN       & betito                       & 2022-06-03    & 08:00         & B                 & 15                \\ \bottomrule
+% % \end{tabular}
+% % \end{table}
+
+% \vspace{2px}
+
+% \textbf{Dicas:} CREATE VIEW, INNER JOIN.
+
+\end{questions}
+
+% \includepdf[pages=-]{material/regra-cpf.pdf}
+
+\end{document}

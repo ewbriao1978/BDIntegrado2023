@@ -1,0 +1,4 @@
+1) ER: OK
+2) Modelo Relacional: faltou uma linha entre grupo e usuário referente ao dono 
+3) SQL:tabelas poderiam estar escritas com minusculo. A tabela Membro não precisava ter uma própria chave primária (poderia ter um chave primária composto com o id do usuário e o id do grupo)
+4) Feed: na timeline o usuário não deve ver suas próprias publicações

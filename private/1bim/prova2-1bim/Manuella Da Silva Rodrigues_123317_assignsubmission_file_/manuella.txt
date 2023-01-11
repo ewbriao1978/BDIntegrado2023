@@ -1,0 +1,30 @@
+Manuella (1.8)
+
+1) er:
+
+faixa não deveria ser uma entidade (-0.2)
+
+faltou definir a cardinalidade do autorelacionamento "recomenda" (-0.2)
+
+2) modelo relacional:
+
+como um cd pode indicar somente um cd não era preciso criar uma nova
+tabela "recomendação" (-0.2)
+
+valor default da data de lançamento incorreta (-0.2)
+
+
+3) script.sql:
+
+faltou definir a pk de musica_cd (-0.2)
+
+4) insert's 
+faltou realizar os insert's de musica_cd  (-0.2)
+
+5) incorreta (-0.2)
+6) incorreta (-0.2)
+7) incorreta (-0.2)
+8) incorreta (-0.2)
+9) incorreta (-0.2)
+
+

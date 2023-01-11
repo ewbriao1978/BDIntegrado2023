@@ -1,0 +1,25 @@
+victor (3.2)
+
+1) er:
+
+numero faixa não devia ser um atributo da entidade cd mas sim do relacionamento entre musica e cd
+(-0.2)
+
+2) modelo relacional:
+
+* a tabela autor_musica deveria ter uma pk composta (-0.2)
+* musica_id e cd_id não podem ter do tipo "serial" (-0.2)
+
+3) script.sql
+
+4) insert's
+
+5) ok
+6) ok
+músicas sem autores não precisavam ter tuplas em "autor_música"
+Somente por causa do insert null,7 em autor_música que a consulta funcionou
+7) ok
+poderia ter usado o extract para extrair o ano da data
+8) ok
+9) incorreta (faltou o having) (-0.2)
+

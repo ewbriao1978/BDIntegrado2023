@@ -1,0 +1,37 @@
+Alexandra - 2.2
+
+1) ER:
+
+- faltou modelar o cd_indicado (-0.2)
+
+2) Modelo Relacional:
+
+* se no ER endereço foi definido como atributo composto (cep e numero)
+a tabela Gravadora deveria ter cep e numero ou o modelo relacional deveria ter 
+uma tabela exclusiva para endereço (-0.2)
+
+- faltou modelar o cd_indicado (-0.2)
+
+3) Script.sql
+
+- autor_musica deveria ter uma chave primária composta
+(-0.2)
+
+- faltou a fk cd_indicado em cd (-0.2)
+
+4) INSERT's
+
+- ok
+
+5) OK
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6) ERRADO (-0.2)
+
+7) ERRADO (-0.2)
+
+8) NÃO FEZ (-0.2)
+
+9) ERRADO (-0.2)

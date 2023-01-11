@@ -1,0 +1,28 @@
+lorrana (3.5)
+
+1) er:
+
+ok
+
+2) modelo relacional:
+
+como um cd indica somente um cd, a cardinalidade não é n:n. Logo, não deve gerar
+uma nova tabela  (-0.2)
+
+
+3) script.sql
+
+ok
+
+4) ok
+
+5) não precisa colocar "_" na condição ilike (-0.1)
+
+6) ok
+
+7) 2000 e 1995 não precisavam ficar entre aspas na condição between
+
+8) ok
+
+
+9) em branco (-0.2)

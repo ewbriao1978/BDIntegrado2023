@@ -1,0 +1,46 @@
+João (0.5)
+
+1) ER:
+
+* faltou o atributo faixa no relacionamento entre as entidades música e cd (-0.2)
+
+erros de cardinalidade (-0.2)
+* faltou a cardinalidade mínima da entidade cd no relacionamento com música 
+* faltou a cardinalidade mínima da entidade gravadora no relacionamento com a entidade cd
+
+* faltou o autorelacionamento de indicação de um cd de um outro cd (-0.2)
+
+
+2) Modelo Relacional:
+ 
+* faltou a fk referente a gravadora na tabela cd (-0.2)
+
+ausência de tabela intermediária (resultado de cardinalidades n:n): (-0.2)
+* faltou a tabela intermediária entre autor e música 
+* faltou a tabela intermediária entre cd e música 
+
+* faltou a criação da coluna faixa (-0.2)
+
+
+3) Script.sql:
+
+coluna "faixa" incorreta na tabela cd (-0.2)
+faltou a indicação do cd (-0.2)
+
+fk incorretas (-0.2)
+* fk incorreta de gravadora referenciando gravadora 
+* fk musica_autor incorreta na tabela música pois a cardinalidade de musica e autor deveria ser n:n
+
+erros de sintaxe/tipos não definidos (-0.2):
+* tipo da coluna preço não foi definida (erro de sintaxe) 
+* fk id_gravadora não teve seu tipo definido (erro de sintaxe)
+
+4) INSERT's (-0.5) 
+
+Erro nas criações das tabelas inviabiliza o funcionamento dos INSERT's
+
+5) em branco (-0.2)
+6) em branco (-0.2)
+7) em branco (-0.2)
+8) em branco (-0.2)
+9) em branco (-0.2)

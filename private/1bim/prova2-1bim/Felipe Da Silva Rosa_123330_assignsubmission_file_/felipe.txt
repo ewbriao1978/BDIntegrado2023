@@ -1,0 +1,33 @@
+Felipe (2.6)
+
+1) ER:
+
+ok
+
+2) Modelo Relacional:
+
+a indicação/recomendação tem cardinalidade 1:1. Logo, no modelo relacional não deve 
+gerar/provocar uma nova tabela.  O correto seria uma fk na própria tabela cd  (-0.2)
+
+3) Script.sql
+
+a tabela recomenda deveria ter uma pk  (-0.2)
+
+4) INSERT's
+
+ok
+
+5) em branco (-0.2)
+
+6)  em branco (-0.2)
+
+7) errada. (-0.2)
+
+A consulta não obtém cd's publicados depois de 01 de janeiro de 2000 (e deveria compreender cd's lançados até 31/12/20)
+
+8) em branco (-0.2)
+
+9)  errada.  (-0.2)
+
+Precisava de group e having para listar as músicas com a quantidade de autores >= 2 
+SELECT musica.nome AS "Musica", autor.nome AS "Autor" FROM autor_musica INNER JOIN musica ON musica.id = autor_musica.musica_id INNER JOIN autor ON autor_musica.autor_id = autor.id;  

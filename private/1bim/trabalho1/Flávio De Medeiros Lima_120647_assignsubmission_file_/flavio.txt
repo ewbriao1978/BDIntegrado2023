@@ -1,0 +1,25 @@
+1) ER:
+
+* Diagramas de Entidade e relacionamento não tem o conceito de chaves
+estrangeiras
+*  Um grupo deve ter membros, donos e publicações.
+Logo, não faz sentido a criação da entidade
+"publicações_grupo" (ainda mais no nível conceitual)
+* O dono do grupo não deve ser um autorelacionamento
+pois um dono é um usuário - e não outro grupo.
+* Uso incorreto do relacionamento ternário "cria"
+
+2) Modelo Relacional:
+
+* dono deveria ser um fk
+* publicações_grupo deveria ser chamada de "membro'
+e estar entre as tabelas "usuário" e "grupo"
+
+
+3) SQL:
+* a coluna "membro" não deveria estar na tabela
+grupo
+* dono não deveria ser um texto (deveria ser um fk
+referente a usuário)
+
+4) Feed: Consulta sql não realizada

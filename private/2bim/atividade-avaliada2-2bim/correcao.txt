@@ -1,0 +1,373 @@
+Victor (3.6/4)
+
+1) Questão - Empresa (0.8/1.0)
+
+- ausência de pk na tabela cargo_ocupado (-0.2)
+
+2) Questão JDBC (1/1.0)
+
+- ok
+
+3) Questão - Clínica (0.8/1.0)
+
+- ausência da tabela de exames (não somente os exames de cada paciente) (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- fulano -  ok 
+- ciclano - ok
+======================================= 
+
+Pyter (2.6/4)
+
+1) Questão - Empresa (0.8/1.0)
+
+- ausência da tabela cargo (-0.2)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.8/1.0)
+
+- ausência da tabela de exames (não somente os exames de cada paciente) (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+=======================================
+
+Nicolas (2.4/4)
+
+1) Questão - Empresa (0.6/1.0)
+
+- erro de sintaxe na lista 32: "dtfim date not null," - não deveria ter esta vírgula (-0.2)
+- ausência da tabela cargo (-0.2)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.8/1.0)
+
+- ausência da tabela de exames (não somente os exames de cada paciente) (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+======================================= 
+Natalia (3.4/4)
+
+1) Questão - Empresa (0.8/1.0)
+
+- ausência da tabela cargo (-0.2)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.6/1.0)
+
+- a consulta deveria ser fk de exame - e não - paciente (-0.2)
+- ausência da tabela de convênios (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+=======================================
+
+Marcos (3.8/4)
+
+1) Questão - Empresa (1/1.0)
+
+- ok
+obs1: faltou o \c
+obs2: ocupação poderia ter uma pk composta que não permitisse que um mesmo funcionario tenha um mesmo cargo cadastrado
+obs3: a pk de uma tabela já é, automaticamente, unique - ou seja - não precisaria algo assim: "cpf text not null primary" key unique,
+
+2) Questão JDBC (1/1.0)
+
+- ok
+
+3) Questão - Clínica (0.8/1.0)
+
+obs1: faltou o \c
+-  faltou a tabela exame (com todos os exames possíveis) e não somente os dos exames ligadas as consultas de um determinado paciente (-0.2)
+
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+=======================================
+
+Maicon (2.4/4)
+
+1) Questão - Empresa (0.6/1.0)
+
+- um funcionario tem vários dependente e um dependente é exclusivo - e não - vários funcionários (-0.2)
+- ausência da tabela cargo (-0.2)
+
+2) Questão JDBC (0.8/1.0)
+
+- todos preparedStatement.setString estava com o mesmo valor 2 (-0.2)
+
+3) Questão - Clínica (0.5/1.0)
+
+- a tabela consulta não deveria ter a fk de convenio (-0.2)
+- a tabela exame não deveria ter a fk de paciente (-0.2)
+- faltou a tabela com todos os exames disponíveis (-0.1)
+
+4) Questão - DCL (0.5/1.0)
+
+- fulano - ok
+- ciclano - não foi possível consultar (-0.5)
+=======================================
+
+Lucas (2.9/4)
+
+1) Questão - Empresa (1/1.0)
+
+- telefone deveria ser um campo texto atômico.
+- Um funcionário deve ter um único telefone - e não - vários
+- não precisaria ter criado uma tabela específica pra telefones
+- a tabela cargo_ocupado deveria ter uma pk composta que conseguisse bloquear a inserção de um mesmo funcionario, com mesmo cargo com a mesma data de inicio
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.4/1.0)
+
+- convenio deveria ser uma tabela (-0.2)
+- medico deveria ser uma tabela (-0.2)
+- a tabela exame não deveria ter a fk oriunda paciente (-0.2)
+
+4) Questão - DCL (0.5/1.0)
+
+- fulano - ok
+- ciclano (-0.5) - Não funcionou SELECT na tabela exame
+psql -h localhost -U ciclano lucas3
+lucas3=> select * from exame;
+ERROR:  permission denied for table exame
+======================================= 
+
+Lorrana (2.8/4)
+
+1) Questão - Empresa (1/1.0)
+
+- ok
+obs1: funcionario_cargo poderia ter uma pk composta que conseguisse bloquear a inserção de um mesmo funcionario, com mesmo cargo com a mesma data de inicio
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.8/1.0)
+
+- a tabela pacienteExame deveria ter uma fk de consulta - e não de paciente (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+=======================================
+Leandro (2.6/4)
+
+1) Questão - Empresa (0.8/1.0)
+
+* faltou a tabela cargo (-0.2) 
+* obs1: a coluna "cargo" de cargo_ocupado deveria ser uma fk
+* obs2: pk já são not null por padrão (não é preciso colocar a cláusula not null)
+
+2) Questão JDBC (0/1.0)
+
+- não realiza o que foi solicitado na questão: 
+- Motivos: 
+	- no bd. telefone foi definido como integer e na classe FuncionarioDAO está definido como String
+	- no bd sexo foi definido com char e na classe está definido com String.
+
+3) Questão - Clínica (0.8/1.0)
+
+- faltou a tabela de convênios (-0.2)
+- obs: pk já são unique: é redundante definir um pk como unique
+
+4) Questão - DCL (1/1.0)
+
+- fulano - ok
+- ciclano - ok
+
+=======================================
+
+Geraldo (1.9/4)
+
+1) Questão - Empresa (1/1.0)
+
+* obs1: Cuidado com o formato/estilo das datas: utilize aaaa-mm-dd
+* Obs2: A tabela ocupacao poderia ter tido uma pk composta com funcionario_id, cargo_id e data de inicio (pois ao longo da carreira um funcionário pode ter um mesmo cargo mais de um vez)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.4/1.0)
+
+- É o paciente que deveria ter a fk de convenio - e não o contrário (-0.2)
+- Exame deveria ter uma fk de consulta - e não de paciente (-0.2)
+- Consulta não deveria ter fk de exame (-0.2)
+
+4) Questão - DCL (0.5/1.0)
+
+- fulano - ok
+- ciclano - com problemas de sintaxe (-0.5)
+
+=======================================
+
+Felipe (3.6/4)
+
+1) Questão - Empresa (1.0/1.0)
+
+- ok
+
+* Obs: A pk composta de ocupacao poderia ter funcionario_id, cargo_id e data de inicio (pois ao longo da carreira um funcionário pode ter um mesmo cargo mais de um vez)
+
+2) Questão JDBC (/1.0)
+
+- ok
+
+3) Questão - Clínica (0.6/1.0)
+
+- ausência da tabela de exames (não somente os exames de cada paciente) (-0.2)
+- ausência da fk de convênio na tabela paciente (-0.2)
+
+4) Questão - DCL (1/1.0)
+
+- ok
+=======================================
+
+Doris (1/4)
+
+1) Questão - Empresa (0.6/1.0)
+
+- a pk deveria ser composta pois evitaria que um funcionario em um mesmo cargo com mesma data inicio fosse cadastrado mais de uma vez no b.d (-0.2)
+
+- faltou a tabela cargo (-0.2)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.4/1.0)
+
+- é o paciente que deve ter a fk de convenio - e não - o contrário (-0.1)
+- fk de exame incorreta. Não seria um fk oriunda de paciente, deveria ser um fk oriunda da tabela consulta (-0.1)
+- crm deveria ser único (-0.1)
+- coluna "    crm CHARACTER(7)UNIQUE," incorreta na tabela "consultas" (-0.1)
+- coluna "    exame_numero INTEGER UNIQUE," incorreta (-0.1)
+- tabela "ficha_paciente" incorreta pois a ficha deve ser o resultado de todas os dados armazenados no b.d - e não - uma tabela só  (-0.1)
+
+4) Questão - DCL (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+=======================================
+
+Danielle (0.8/4)
+
+1) Questão - Empresa (0.6/1.0)
+
+- pk de funcionario criada com erros de sintaxe (-0.1)
+- ausência da tabela cargo (-0.2)
+- erro de sintaxe em 	"data_admissao date,": Não teria que ter esta vírgula (-0.1)
+
+2) Questão JDBC (0/1.0)
+
+- não fez o que foi solicitado pela questão
+
+3) Questão - Clínica (0.2/1.0)
+
+- erro de sintaxe em "data_exame date;": Não deveria ter este ponto-e-vírgula (-0.1)
+- erro de sintaxe na cláusula check de sexo "sexo char(1), check (sexo in (‘M’, ‘F’)))": Não deveria ter esta vírgula (-0.1)
+- erro de sintaxe na cláusula check de sexo "sexo char(1), check (sexo in (‘M’, ‘F’)))": Deveria ter um parênteses a menos (-0.1)
+- erro de sintaxe em "numero_exame integer references exame(id)".  Deveria ser "numero_exame integer references exame(id)," (-0.1)
+- faltou a tabela médico (-0.1)
+- fk 	"numero_consulta integer references consulta (id)"  da tabela exame mal construída. A pk referente de consulta é "numero_consulta" e não "id". Além disso, a tabela é "consultas" - e não - "consulta" (-0.1)
+- a tabela "consulta" não poderia ter a fk "numero_exame". A relação é ao contrário: a tabela exame deve ter a fk de consulta (-0.1)
+- erro de sintaxe em "diagnostico text,": não deveria ter a vírgula (-0.1)
+
+4) Questão - DCL (0/1.0)
+
+- não fez o que foi solicitado pela questão
+=======================================
+
+Canrobert (3/4)
+
+1) Questão - Empresa (1.0/1.0)
+
+- ok
+
+* Obs: A pk composta de funcionarioCargo poderia ter funcionario_id, cargo_id e data de inicio (pois ao longo da carreira um funcionário pode ter um mesmo cargo mais de um vez)
+
+2) Questão JDBC (0/1.0)
+
+- não implementou o que foi solicitado
+
+3) Questão - Clínica (1.0/1.0)
+
+- ok
+
+4) Questão - DCL (1.0/1.0)
+
+- ok
+======================================= 
+
+Andrews (2.6/4)
+
+1) Questão - Empresa (1/1.0)
+
+Cuidado com o formato/estilo das datas: utilize aaaa-mm-dd
+
+2) Questão JDBC (0/1.0)
+
+não implementou o que foi solicitado
+
+3) Questão - Clínica (0.8/1.0)
+
+faltou a tabela de médico (-0.2)
+
+4) Questão - DCL (0.8/1.0)
+
+* fulano - criação com erros de sintaxe (-0.2)
+
+* ciclano - ok
+=======================================
+
+Alexandra (0.8/4)
+
+1) Questão - Empresa (0.6/1.0)
+
+* Faltou um "e" na instrução "create" da tabela dependente (-0.2)
+* Faltou uma vírgula em "dataFinal timestamp" (-0.1)
+* Um espaço depois do underline na definação da fk id_cargo na tabela funcionarioCargo (-0.1)
+
+2) Questão JDBC (0/1)
+
+- questão não faz o que foi solicitado devido a inúmeros erros de sintaxe.
+- Não apresentou classe funcionário, o funcionariodao e etc.
+
+3) Questão - Clínica (0.2/1.0)
+
+* Erro de sintaxe na definição "data timestamp" da tabela exame. Falta uma vírgula (-0.1)
+* Não precisa criar uma cláusula unique para nenhuma pk (-0.2)
+* O exame deve estar ligado somente a consulta e a consulta por sua vez está ligada ao paciente e ao médico. Logo não há 
+necessidade de criar as fk's vindas de paciente e de médico na tabela exame  (-0.2)
+* Consulta não deve ter um fk oriunda da tabela exame (-0.2)
+* fk criada de forma incorreta já que medico não possui a coluna id (tem crm) e tipo incorreto (já que crm é text) (-0.1)
+
+
+4) Questão - DCL (0/1)
+
+* não faz o que foi solicitado - apresenta erros de sintaxe

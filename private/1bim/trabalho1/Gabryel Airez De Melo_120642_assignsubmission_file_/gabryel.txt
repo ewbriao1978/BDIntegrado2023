@@ -1,0 +1,22 @@
+1) ER:
+* faltou definir cardinalidade no autorelacionamento
+* Quem tem álbum de fotos é Usuário (NÃO arquivo de mídia)
+2) Modelo Relacional:
+* Modelo Relacional não armazena o dono do grupo
+* Modelo Relacional não define amigos/seguidos de um usuário
+* Modelo Relacional deveria ligar/relacionar album com usuário - e não - com a tabela arquivo_midia
+* Ausênsia da fk de usuário em publicação
+* Ausêncua da fk de grupo em publicação
+* Ausência da fk de publicação em arquivo_mídia
+* Ausência da fk de album em foto
+3) SQL:
+* email sendo pk não precisaria ser também definido com unique
+* falta definir um dono para o grupo
+* falta estabelecer amizades
+* falta estabelecer amizades que não acompanham publicações
+* id de publicação deveria ser do tipo serial
+* fk incorretas na arquivo_midia
+* uso incorreto de pk composta em arquivo de mídia
+* id de foto deveria ser do tipo serial
+* a tabela foto deveria ter a fk de album
+4) Feed: Consulta solicitada não foi construída.

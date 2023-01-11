@@ -1,0 +1,36 @@
+Andrews - (2.6)
+
+1) ER:
+
+faixa não pode ser um atributo identificador (-0.2)
+
+2) Modelo Relacional:
+
+como um cd recomenda somente um cd, não era necessário
+criar um tabela indicação. Do modo que o modelo relacional foi construído
+um cd pode indicar vários cd's (e não somente um) (-0.2)
+
+3) Script.sql
+
+autor_musica deveria ter uma chave primária composta (-0.2)
+
+no modelo relacional musica_cd projetou uma chave primária para a tabela musica_cd
+mas aqui no script foi definido uma única chave primária (de forma incorreta) (-0.2)
+
+
+4) INSERT's
+
+- ok
+
+5) OK
+
+Obs: Poderia ter feito também:
+- SELECT nome FROM autor WHERE nome ILIKE ’R%O’;
+
+6)  ERRADO (-0.2)
+
+7)  ERRADO (-0.2)
+
+8)  ERRADO (-0.2)
+
+9) ERRADO (-0.2)

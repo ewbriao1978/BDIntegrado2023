@@ -1,0 +1,19 @@
+lucas (3.5)
+
+1) er: ok
+
+2) modelo relacional: ok
+
+3) script.sql
+
+4)  insert's
+
+5) teria que ter usado ilike para "pegar" maiúsculas e minúsculas (-0.1)
+
+6) em branco (-0.2)
+
+7) em branco (-0.2)
+
+8) em branco (-0.2)
+
+9) em branco (-0.2)

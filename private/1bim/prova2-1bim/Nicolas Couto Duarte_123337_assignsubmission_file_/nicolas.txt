@@ -1,0 +1,22 @@
+nicolas (3.0):
+
+1) er:
+
+faltou definir a cardinalidade do autorelacionamento (-0.2)
+
+2) modelo relacional:
+
+preço não pode ser definido como "Text" (-0.2)
+
+3) script.sql
+
+dica: evitar caracteres especiais para nomes de tabelas e colunas
+
+4) insert's
+
+5) deveria ter usado ilike 
+6) incorreta (-0.2)
+7) ok
+8) em branco (-0.2)
+9) em branco (-0.2)
+

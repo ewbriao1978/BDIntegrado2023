@@ -1,0 +1,15 @@
+1) er:
+ok
+
+2) modelo relacional:
+
+* usuário_grupo deveria ter uma chave primária composta
+* usuário_grupo poderia ter o nome "membro"
+
+3) SQL:
+
+* ok
+
+4) Feed:
+
+Realizou o que foi solicitado

@@ -1,0 +1,41 @@
+Doris (1.0)
+
+1) ER:
+ 
+* cardinalidade invertida entre cd e gravadora (-0.2)
+
+
+2) Modelo Relacional:
+
+faltou a fk de gravadora em cd (-0.2)
+
+faltou a coluna "faixa" em "cd_musicas" (-0.2)
+
+3) Script.sql
+
+cuidado com colunas/tabelas com acentos
+e caracteres especiais (ex: preço)
+
+faltou pk em cd_musica (-0.2)
+faltou pk em autor_musica (-0.2)
+
+faltou a coluna "faixa" em cd_musica (-0.2)
+
+duas colunas "id" em música (-0.2)
+
+duas colunas "id" em cd (-0.2)
+
+4) INSERT's
+
+erro: datas devem ficar entre aspas (-0.2)
+erro: musica tem a coluna "duração" e não "duracao" (-0.2)
+
+5) (-0.2)
+
+6)  (-0.2)
+
+7)  (-0.2)
+
+8) (-0.2)
+
+9)  (-0.2)

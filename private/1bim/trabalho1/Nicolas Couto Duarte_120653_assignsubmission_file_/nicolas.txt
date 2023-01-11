@@ -1,0 +1,20 @@
+1) ER:
+
+* faltou atributos descritivos (atributos de relacionamentos)
+para o autorelacionamento amizade capazes de dizer 
+se um determinado usuário está seguindo ou não o feed de um amigo
+* um grupo deve ter somente um dono
+
+2) Modelo Relacional
+
+* faltou a ligação (linha) entre grupo e usuário
+* o recomendável seria que o membro (usuario_grupo) fizesse
+as publicações de um grupo
+
+3) SQL:
+
+* cuidado com nomes de colunas e/ou tabelas com acentos
+
+4) Feed: ok
+
+

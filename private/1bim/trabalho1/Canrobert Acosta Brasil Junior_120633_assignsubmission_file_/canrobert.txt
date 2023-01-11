@@ -1,0 +1,13 @@
+1) ER: ok
+2) Modelo Relacional: ok
+3) SQL: 
+* amizade e usuario_grupo poderiam ter chave primarias compostas (-0.1)
+* Sugestão: as chaves primárias poderia ter somente o nome id (não precisa sufixo com nome da tabela)
+4) Feed:  OK 
+* Dúvida: A consulta cobre publicações vindas de grupos onde o usuário que realizou tal publicação não é meu amigo? No exemplo abaixo (conforme os teus inserts) a publicação do grupo é feita também por um amigo do usuário 1, correto? Caso o usuário da publicação do grupo não fosse amigo do usuário 1, a consulta também estaria correta? 
+
+idusuario | idusuario2 | idgrupo | idpublicacao |      data_hora      |         texto          | idusuario | idgrupo 
+-----------+------------+---------+--------------+---------------------+------------------------+-----------+---------
+  1 |          3 |       1 |            3 | 2022-03-04 14:35:00 | Nulla et rutrum nibh   |         3 |       1
+
+

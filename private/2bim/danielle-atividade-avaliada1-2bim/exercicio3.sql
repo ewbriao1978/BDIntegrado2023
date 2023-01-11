@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS atividade3;
+
+
+CREATE DATABASE latividade3;
+
+\c atividade3;
+
+DROP TABLE IF EXISTS  FUNCIONARIO;
+DROP TABLE IF EXISTS  LIMPEZA;
+DROP TABLE IF EXISTS  ATENDIMENTO;
+DROP TABLE IF EXISTS  OPERACAO;
+
+
+CREATE TABLE  FUNCIONARIO (    
+    idfuncionario serial, 
+    nome   text NOT NULL, 
+    setor text,
+);
+
+
+INSERT INTO SETOR (NOME_SETOR) VALUES ('limpeza');    
+INSERT INTO SETOR (NOME_SETOR) VALUES ('atendimento');    
+INSERT INTO SETOR (NOME_SETOR) VALUES ('operacao');    
+ 
+    
+

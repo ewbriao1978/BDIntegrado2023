@@ -1,0 +1,21 @@
+1) er:
+
+2) modelo relacional:
+* tabela amizade não pode ter
+colunas repetidas de usuário
+* facelight é uma tabela desnecessária
+* dentro de um grupo quem 
+publica as publicações são 
+os membros (não o grupo)
+
+3) sql:
+
+* não precisava da tabela facelight
+* tabela usuário não deve ter a coluna     publicacao_usuario text
+* grupo não pode ter a coluna     publicacao_grupo text
+* usuario_grupo não deve ter 3 fk's
+
+
+4) feed: ok
+
+

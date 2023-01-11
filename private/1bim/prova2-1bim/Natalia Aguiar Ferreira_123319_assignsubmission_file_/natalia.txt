@@ -1,0 +1,53 @@
+natalia (1.4)
+
+1) er:
+
+faixa não pode ser um atributo da entidade "cd" (-0.2) 
+
+2) relacional:
+
+como um cd pode indicar um único cd (conforme definido no er) não há necessidade de se criar uma outra tabela "recomendar" (-0.2)
+ 
+faixa não deve estar na tabela "cd" (-0.2)
+faixa não deve ser pk da tabela "cd" (-0.2)
+
+uma gravadora produz cd's e um cd é gravado, exclusivamente, em uma única gravadora. Logo, não havia necessidade
+de uma tabela "cd_gravadora" (-0.2) pois o relacionamento/cardinaldidade é 1:n e não n:n
+
+
+3) script.sql
+
+erro de sintaxe: (-0.2)
+psql:natalia.sql:35: ERROR:  syntax error at or near "primary"
+LINE 2:     id_cd primary key integer references cd(id),
+
+
+
+4) insert
+
+erro de sintaxe: (-0.2)
+psql:natalia.sql:59: ERROR:  syntax error at or near "2"
+LINE 1: (2,'Anita');         ^
+psql:natalia.sql:60: ERROR:  syntax error at or near "3"
+LINE 1: (3,'Luiza Sonza');         ^
+psql:natalia.sql:61: ERROR:  syntax error at or near "4"
+LINE 1: (4,'Baco exu do blues');
+       ^
+erro de sintaxe: (-0.2)
+psql:natalia.sql:64: ERROR:  invalid input syntax for type time: "6"
+LINE 2: (11,'6','Olhos castanhos');            ^
+psql:natalia.sql:65: ERROR:  syntax error at or near "12"
+LINE 1: (12,'3','Envolver');         ^
+psql:natalia.sql:95: ERROR:  syntax error at or near "13"
+LINE 1: (13,'2','cigana')
+
+
+5) incorreta (-0.2)
+
+6) em branco (-0.2)
+
+7) em branco (-0.2)
+ 
+8) em branco (-0.2)
+
+9) em branco (-0.2)

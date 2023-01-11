@@ -1,0 +1,28 @@
+::::::::::::::
+andrews.txt 
+::::::::::::::
+1) 
+* ER: No ER não há o conceito de fk, ou seja, publicações não deve ter grupo_id (-0.1)
+* No ER deveria estar representado que grupo tem publicações, ou seja, deveria ter um relacionamento entre grupo e publicações ou
+algo (entidade/relacionamento) entre usuário, publicações e grupo (-0.1)
+* Não precisaria existir 2 autorelacionamentos em usuário pois no próprio relacionamento "segue" 
+poderia existir um atributo acompanha ou não acompanha feed 
+
+
+2) Modelo Relacional: 
+Não tem muito sentido Seguidor e Amigo ter exatamente as mesmas colunas, ou seja, exatamente a mesma tabela. Logo, deveria ser a mesma (-0.1)
+As tabelas/colunas devem não ter caracteres especiais e/ou acentos.  
+ex: "Publicação, álbum_id e usuário_id" 
+Para evitar ciclos, poderia ter pensado que um grupo tem membros e membros tem publicações - fazendo que usuários 
+com publicações seja publicações fora de um grupo (individuais)
+Autorelacionamento de album incorreto. (-0.1)
+
+3) SQL: 
+
+pk's pendente (-0.1)
+- tabela amigo deveria ter uma pk
+- tabela seguir deveria ter uma pk
+- membros deveria ter uma pk 
+* album não deveria ter um fk autoreferenciada (-0.1)
+
+4) Feed: Não cumpri o que foi solicitado. (-0.5)

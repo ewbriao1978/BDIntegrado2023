@@ -1,0 +1,31 @@
+Flavio (1.1)
+
+1) ER:
+
+faltou o atributo "faixa" no relacionamento "tem" entre "cd" e "musica" (-0.2)
+
+2) Modelo Relacional:
+
+faltou a coluna "faixa" na tabela (-0.2)
+
+3) Script.sql:
+
+tipo serial nunca será nulo. Logo, serial not null é redundante (-0.2)
+faltou check no preço da tabela "cd" (-0.2)
+faltou pk em "musica_cd" (-0.2)
+faltou a pk em "autor_musica" (-0.2)
+faltou definir o tipo da coluna "duracao" (-0.2)
+
+4) INSERT's (-0.5)
+
+não funciona pois o script tem erro de sintaxe na linha 23
+
+5)  em branco (-0.2)
+
+6)  em branco (-0.2)
+
+7)  em branco (-0.2)
+
+8)  em branco (-0.2)
+
+9)  em branco (-0.2)

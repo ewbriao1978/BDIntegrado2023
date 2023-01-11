@@ -1,0 +1,17 @@
+1) ER:
+* Não precisaria ter 2 autorelacionamentos em usuário
+* Email não poder ser uma chave parcial de usuário pois usuário é uma entidade forte. Chaves parciais devem ser usadas somente
+em entidades fracas.
+
+
+2) Modelo Relacional:
+
+* Não há necessidade de ter 2 tabelas para "segue usuário" e "amizade". Uma única tabela como uma coluna booleana resolveria.
+* Tabelas compartilhaPublicaçãoUsuário e compartilhaPublicaçãoGrupo são desnecessárias
+
+3) SQL:
+
+* trouxe os problemas do modelo relacional
+
+
+4) Feed: ok
