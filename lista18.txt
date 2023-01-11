@@ -1,0 +1,31 @@
+3) empresa (cod_empresa, nome_empresa, end_empresa, nome_fundador, nacionalidade_fundador, {filial (filial_nro, filial_local, filial_data_abertura)})
+
+1 FN
+empresa (cod_empresa, nome_empresa, end_empresa, cod_fundador);
+filial(filial_nro,  cod_empresa, filial_local, filial_data_abertura)
+fundador(cod_fund, nome_fundador, nacionalidade_fundador);
+===============================================================
+
+
+2) aluno (nro_aluno, nome_aluno, nome_depto, sigla_depto, cod_depto, cod_orient, nome_orient, fone_orient, cod_curso, nome_curso)
+
+1 FN
+Nada
+
+2 FN
+- departamento (cod_departamento, nome_depto, sigla_depto);
+- aluno (nro_aluno, nome_aluno, cod_departamento, cod_curso, cod_orient);
+- curso (cod_curso, nome_curso);
+- orientador (cod_orient, nome_orient, fone_orient);
+=============================================================================
+1) Vendedor (nro_vend, sexo_vend, nome_vend, {cliente (nro_cli, end_cli, nome_cli)})
+
+1 FN
+- vendedor (nro_vend, sexo_vend, nome_vend);
+- cliente (nro_vend, nro_cli, end_cli, nome_cli
+
+2 FN
+- vendedor (nro_vend, sexo_vend, nome_vend);
+- vendedor_cliente(nro_vend, nro_cli);
+- cliente (nro_cli, end_cli, nome_cli);
+===============================================================
