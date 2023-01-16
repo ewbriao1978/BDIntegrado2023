@@ -84,7 +84,7 @@ Imagine que existam alguns poucos alunos que representam grupos de outros alunos
 
 ## Herança ou Especialização
 
-Especialização consiste na subdivisão de uma entidade mais genérica (ou entidade pai) em um conjunto de entidades especializadas (ou entidades filhas).
+Herança (ou Especialização) consiste na subdivisão de uma entidade mais genérica (ou entidade pai) em um conjunto de entidades especializadas (ou entidades filhas).
 
 Isso ocorre quando um conjunto de entidades pode conter subgrupos de entidades com atributos específicos a cada subgrupo. Esse processo tem por finalidade refinar o esquema da base de dados, tornando-o mais específico.
 
@@ -92,15 +92,15 @@ A figura abaixo apresenta um exemplo de especialização entre as entidades **Pe
 
 ![especializacao](especializacao.png)
 
-Observe que a especialização é indicada no diagrama por um triângulo, e as entidades filhas estão relacionadas com a entidade pai por meio do triângulo.
+**Observe que a herança/especialização é indicada no diagrama por um triângulo**, e as entidades filhas estão relacionadas com a entidade pai por meio do triângulo.
 
-As entidades *herdam* todos os atributos da entidade pai e, portanto, não se devem repetir atributos da entidade pai nas entidades filhas. Isso significa que os atributos que aparecem na entidade pai são os atributos que existem em comum entre as entidades filhas. 
+As entidades *herdam* todos os atributos da entidade pai e, portanto, não se devem repetir atributos da entidade pai nas entidades filhas. **Isso significa que os atributos que aparecem na entidade pai são os atributos que existem em comum entre as entidades filhas**. 
 
-Também não é necessário indicar uma chave primária para as entidades filhas. A chave primária para as entidades filhas será definida no modelo relacional.
+**Também não é necessário indicar um atributo identificador para as entidades filhas. O atributo identificador para as entidades filhas será definida no modelo relacional (modelagem lógica)**.
 
 Uma especialização pode ter quantas entidades filhas forem necessárias, inclusive uma, se for o caso. Além disso, uma entidade filha pode também ser entidade pai para outra especialização.
 
-No exemplo, a especialização é um caso de herança total pois uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor**. Neste tipo de especialização, recomenda-se inserir um "t" minúsculo ao lado do símbolo que representa a herança/especialização. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento.
+No exemplo, a especialização é um caso de **herança total** pois uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor**. Neste tipo de especialização, **recomenda-se inserir um "t" minúsculo ao lado do símbolo que representa a herança/especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**.
 
 ## Agregação OU Entidade Associativa
 
@@ -117,3 +117,8 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 ![agregacao-sem](agregacao-sem.png)
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
+
+
+# Resumo 
+
+![resumo-er](resumo-er.png)

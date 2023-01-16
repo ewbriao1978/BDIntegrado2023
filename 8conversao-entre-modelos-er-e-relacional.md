@@ -75,9 +75,9 @@ A chave primária da nova tabela, será composta pelos atributos chaves das enti
 
 ![conversao-ternario2](conversao-ternario2.png)
 
-## Entidade Associativa (Agregação)
+## Agregação
 
-Uma entidade associativa no modelo ER vira uma tabela no modelo relacional e irá conter seus próprios atributos, mas as chaves estrangeiras de acordo com os seus relacionamentos, como mostra a figura abaixo.
+Uma agregação no modelo ER vira uma tabela no modelo relacional e irá conter seus próprios atributos, mas as chaves estrangeiras de acordo com os seus relacionamentos, como mostra a figura abaixo.
 
 
 ![conversao-agregacao](conversao-agregacao.png)

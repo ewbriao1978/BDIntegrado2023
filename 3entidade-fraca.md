@@ -10,7 +10,7 @@ A entidade **Contato** da figura é uma entidade fraca porque não possui um atr
 Livros de banco de dados, geralmente, representam a entidade fraca por um retângulo duplo e o relacionamento entre a entidade fraca e a outra entidade por losango duplo.
 -->
 
-Entidades fracas são representadas por meio de retângulos com bordas duplas. Os relacionamentos envolvendo entidades fracas são representados por meio de losangos com bordas duplas. Normalmente, chaves parciais são sublinhadas com linhas pontilhadas.
+**Entidades fracas são representadas por meio de retângulos com bordas duplas**. Os **relacionamentos envolvendo entidades fracas são representados por meio de losangos com bordas duplas**. Normalmente, **chaves parciais são sublinhadas com linhas pontilhadas**.
 
 ![entidade-fraca](entidade-fraca.png)
 

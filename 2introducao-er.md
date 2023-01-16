@@ -130,4 +130,4 @@ Como os atributos individualmente podem ser repetir, vamos tentar uma chave prim
 
 ## Conteúdo complementar
 
-[Slides](https://github.com/IgorAvilaPereira/bd2022_1sem/raw/main/2introducao-er.pdf)
+[Slides](2introducao-er.pdf)
